@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Deploying reproducible analytics environments for regulated use cases
 ================
 
 ### posit::conf(2025)
