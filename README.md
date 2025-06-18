@@ -3,13 +3,30 @@ Deploying reproducible analytics environments for regulated use cases
 
 ### posit::conf(2025)
 
-by James Black, Orla Doyle, Doug Kelkhoff, and Michael Mayer
+by James Black & Orla Doyle (Novartis), Doug Kelkhoff (Roche), Michael Mayer (Posit) and Damian Rodziewicz (Appsilon)
 
 -----
 
-INSTRUCTIONS FOR INSTRUCTORS: Please insert information about your workshop below. Then, add workshop content in the materials folder and link to each session’s materials from the schedule below. You are welcomed to add more rows to the schedule. We just ask that you take breaks at the specified times. Once you are done adding information, you can remove these instructions from the README.
+The deployment of reproducible analytical environments is a critical topic in the regulated industries, especially for meeting regulatory requirements and ensuring reproducibility in research. This workshop aims to explore the multifaceted challenges and opportunities associated with provisioning and deploying R-based environments, drawing from experiences of deploying enterprise-scale analytical environments for regulatory filings.
 
-Alternatively, you can completely redo the organization of this repo  as a Quarto website or some other format you prefer to host your workshop materials. The only requirement is that your workshop materials are hosted here.
+Our session will address the following key questions and themes:
+Actionability of Containers for R Deployments: Evaluating the feasibility and effectiveness of using containers to deploy R-based environments for clinical and regulatory use. The discussion will include scaling with clinical use cases and polyglot analyses.
+Industry-Standard Base Images: Consider whether and how a standard industry base image could streamline health authority buy-in and compliance processes.
+Selecting Packages: Identifying essential qualities to assess for package selection, discussing the categorization of risk and respective activities for high-risk uses.
+
+Pharma-Specific Package Testing: Debating the necessity for pharma-specific testing of public packages and envisioning potential shared solutions for package validation and vulnerability tracking.
+
+Does this align with a path to sharing environments with regulators: Examining the practicality of sharing containerized analyses with health authorities, taking into account OS differences?
+
+Compliance with the EU Cybersecurity Resilience Act: Outlining expectations and requirements for public R repositories to support compliance with recent cybersecurity legislation.
+
+Provisioning packages to users: Historically, there is a preference to bundle packages into an environment rather than use a repository snapshot. Using learnings from companies that have de-coupled R packages from operating systems, how can we balance the burden of validation and qualification against the need for open source to be able to deploy packages continuously and empower teams with the agility to move between more granular package cohorts snapshots?
+
+The workshop will blend insight from those who have navigated these challenges with discussions on current solutions and methodologies. Our goal is to foster a community dialogue that highlights existing implementations and explores diverse perspectives without imposing a single opinionated process. This workshop will be a mixture of sharing, discussion, and exercises.
+
+Join us for a robust discussion to share experiences, identify best practices, and contribute to a collective understanding of deploying validated R packages in a compliant and efficient manner within highly regulated industries.
+
+Target Audience: This workshop is ideal for data scientists, statisticians, IT professionals, and regulatory compliance experts interested in deploying R packages in highly regulated environments.
 
 -----
 
