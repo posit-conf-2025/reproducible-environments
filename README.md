@@ -32,7 +32,7 @@ Target Audience: This workshop is ideal for data scientists, statisticians, IT p
 
 :spiral_calendar: September 16, 2025  
 :alarm_clock:     09:00 - 17:00  
-:hotel:           ROOM TBD  
+:hotel:           International South  
 :writing_hand:    [pos.it/conf](http://pos.it/conf)
 
 -----
