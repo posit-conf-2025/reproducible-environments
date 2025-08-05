@@ -43,20 +43,24 @@ ADD WORKSHOP DESCRIPTION.
 
 ## Setup
 
-ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO COMPLETE PRIOR TO THE WORKSHOP. THIS COULD BE A LINK TO A THREAD ON POSIT COMMUNITY, PACKAGE INSTALL INSTRUCTIONS, HOW TO GET AN POSIT CLOUD ACCOUNT, ETC.
+* Access to an environment that has packages all pre-instaleld (i.e. frozen or pre-baked environment)
+* Access to an environment with minimal packages that depends on an renv.lock file to populate packages
+* Quarto files to walk through common steps setting up, updating packages, adding packages, etc per environment
 
 ## Schedule
 
 | Time          | Activity         |
 | :------------ | :--------------- |
 | 09:00 - 09:30 | Welcome and intros |
-| 09:30 - 10:30 | **A reflection on conversations to date**<br>• Introduction to the R Validation Hub and Regulatory Repo<br>• R Package Validation at Roche<br>• A mission to move to rolling validated cohorts at Novartis<br>• Discussion |
+| 09:30 - 10:30 | **A reflection on conversations to date**<br>• Introduction to the R Validation Hub and Regulatory Repo<br>• R Package Validation at Roche<br>• A mission to move to rolling validated cohorts at Novartis<br>• Experiences across industries with Appsilon and Posit<br>• Discussion |
 | 10:30 - 11:00 | *Coffee break*   |
 | 11:00 - 12:30 | **Rstudio Cloud Session**<br>• Introduction to our environment<br>• Working with packages in a frozen environment<br>• Working with packages in a rolling environment<br>• Discussion
 | 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | **Small group session**       |
+| 13:30 - 14:00 | **Small group session Part 1**<br>• Defining stakeholders<br>• What would ideal look like starting a project with validated packages, updating packages, and using internal unpublished packages  |
+| 14:00 - 13:00 | **Small group session Part 2**        | 
 | 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Session 4        |
+| 15:30 - 16:30 | **Small group presentations**<br>• 10 minutes + 5 minutes per group (3 groups)<br>*Key questions on how packages are used in the controlled environments:*<br>* What is the process for 'published' CRAN/Bioconductor packages<br>* What is the process for Github/Gitlab packages<br>* What is the process for internal packages<br>* |
+| 16:30 - 17:00 | Wrap up and call for next steps      |
 
 
 ## Instructor(s)
