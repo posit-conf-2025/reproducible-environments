@@ -5,6 +5,15 @@ Deploying reproducible analytics environments for regulated use cases
 
 -----
 
+:spiral_calendar: September 16, 2025  
+:alarm_clock:     09:00 - 17:00  
+:hotel:           International South  
+:writing_hand:    [pos.it/conf](http://pos.it/conf)
+
+-----
+
+## Description
+
 The deployment of reproducible analytical environments is a critical topic in the regulated industries, especially for meeting regulatory requirements and ensuring reproducibility in research. This workshop aims to explore the multifaceted challenges and opportunities associated with provisioning and deploying R-based environments, drawing from experiences of deploying enterprise-scale analytical environments for regulatory filings.
 
 Our session will address the following key questions and themes:
@@ -25,19 +34,6 @@ The workshop will blend insight from those who have navigated these challenges w
 Join us for a robust discussion to share experiences, identify best practices, and contribute to a collective understanding of deploying validated R packages in a compliant and efficient manner within highly regulated industries.
 
 Target Audience: This workshop is ideal for data scientists, statisticians, IT professionals, and regulatory compliance experts interested in deploying R packages in highly regulated environments.
-
------
-
-:spiral_calendar: September 16, 2025  
-:alarm_clock:     09:00 - 17:00  
-:hotel:           International South  
-:writing_hand:    [pos.it/conf](http://pos.it/conf)
-
------
-
-## Description
-
-ADD WORKSHOP DESCRIPTION.
 
 ## Setup
 
