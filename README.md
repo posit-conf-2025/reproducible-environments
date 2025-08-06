@@ -3,8 +3,6 @@ Deploying reproducible analytics environments for regulated use cases
 
 ### posit::conf(2025)
 
-by James Black & Orla Doyle (Novartis), Doug Kelkhoff (Roche), Michael Mayer (Posit) and Rafael Pereira (Appsilon)
-
 -----
 
 The deployment of reproducible analytical environments is a critical topic in the regulated industries, especially for meeting regulatory requirements and ensuring reproducibility in research. This workshop aims to explore the multifaceted challenges and opportunities associated with provisioning and deploying R-based environments, drawing from experiences of deploying enterprise-scale analytical environments for regulatory filings.
@@ -65,7 +63,10 @@ ADD WORKSHOP DESCRIPTION.
 
 ## Instructor(s)
 
-ADD INSTRUCTOR(S) INFO.
+- James Black & Orla Doyle (Novartis)
+- Doug Kelkhoff (Roche)
+- Michael Mayer (Posit)
+- Rafael Pereira (Appsilon)
 
 -----
 
