@@ -19,7 +19,7 @@ Deploying reproducible analytics environments for regulated use cases
     - [ ] In-house package
     - [ ] CRAN vs Github version
     - [ ] Environment lifecycle for a study (freeze or upgrade R versions)
-- [ ] Propose <30 min frozen vs rolling experience changing packages (James)
+- [x] Propose <30 min frozen vs rolling experience changing packages (James)
 - [ ] Ensure we have access to Posit Workbench (Michael)
 - [ ] Weekly meetings setup (James) - aim for Wednesday
 
