@@ -14,7 +14,7 @@ Deploying reproducible analytics environments for regulated use cases
 
 - [ ] Check lunch and coffee break times (James)
 - [ ] Who is attending right now (Doug)
-- [x] Main technical session content first proposal. New sys dependencies. Auditable jobs (Doug). Added to gdoc.
+- [x] Main technical session content first proposal. New sys dependencies. Auditable jobs (Doug). [Added to gdoc](https://docs.google.com/document/d/1SKsN6N2ubydlNmyxYkK5qWTZnxK0lPgU8orSdDZ6MzM/edit?tab=t.0).
     - [ ] Net yet validated package
     - [ ] In-house package
     - [ ] CRAN vs Github version
