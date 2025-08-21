@@ -1,0 +1,26 @@
+# Welcome! {.center}
+
+![](https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif){fig-align="center" width="400px"}
+
+## Today
+
+::: {style="font-size: 90%;"}
+- **Till 10.30am**: A reflection on conversations to date
+- **10.30am**: ☕ Coffee break
+- **11am**: Hands-on
+- **12.30pm**: 🍲 Lunch
+- **1.30pm**: Hands-on part 2 
+- **2pm**: Small group session
+- **3pm**: ☕ Coffee break
+- **3.30pm**: Small group session part 2
+- **4.30pm**: Wrap up
+:::
+
+## Our aim
+
+::: {.incremental}
+- **Explore** challenges in provisioning R environments for regulated industries
+- **Evaluate** different approaches
+- **Foster** dialogue
+- **Share** experiences 
+:::

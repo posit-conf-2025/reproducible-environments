@@ -1,0 +1,25 @@
+# Small group session {.center}
+
+A chance to design with your peers.
+
+## Goal
+
+::: {.columns}
+
+::: {.column width="50%"}
+[**Deliverable 1:**]{style="color: #1f4e79;"}
+
+- Who are the key stakeholders to a regulated R environment?
+- Are you aiming to solve specific pain points?
+:::
+
+::: {.column width="50%"}
+[**Deliverable 2:**]{style="color: #1f4e79;"}
+
+- Whiteboard a proposed architecture to test and provision 'post risk review' packages
+- Highlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc
+:::
+
+:::
+
+---
