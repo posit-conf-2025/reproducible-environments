@@ -84,6 +84,12 @@ Target Audience: This workshop is ideal for data scientists, statisticians, IT p
 
 - [Day 4 of the Posit Admin training](https://solutions.posit.co/admin-training/) includes sections on Posit Package Manager (PPM)
 
+## Slides
+
+Render the slides with
+
+`quarto render presentation/index.qmd  --output-dir ../docs`
+
 -----
 
 ![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
