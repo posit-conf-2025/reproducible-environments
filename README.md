@@ -90,6 +90,8 @@ Render the slides with
 
 `quarto render presentation/index.qmd  --output-dir ../docs`
 
+A github action pushes the `docs` folder to this location: https://posit-conf-2025.github.io/reproducible-environments/
+
 -----
 
 ![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
