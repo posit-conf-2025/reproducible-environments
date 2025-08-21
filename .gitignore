@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rprofile
+.gitignore
+renv.lock
+presentation/index.html
+presentation/index_files/
+renv/activate.R
+.gitignore
