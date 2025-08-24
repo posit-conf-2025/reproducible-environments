@@ -1,0 +1,30 @@
+---
+title: "You've got to roll with it"
+format: revealjs
+---
+
+## Adopting new tools 
+
+- At Novartis we were testing the {rbmi} package for multiple imputation
+- We weren't able to reproduce our results 
+- The underlying algorithm is deterministic so this shouldn't be the case
+- The magnitude of the difference was enough to change the scientific conclusions
+
+## Reproducibility Detective Work
+
+**Did we set the seed?** *Yes!*  
+**Is this related to hardware?** *No!*   
+**Is this a problem with a specific OS linear algebra library?** *No!*  
+**Injected custom code into {rbmi} enabled us to localise the issue:** *Problem originates from {rbmi} dependencies.*     
+
+![](images/rbmi_deps.png)
+
+
+ 
+
+## Solution
+
+## Remediation
+
+## Env impact
+
