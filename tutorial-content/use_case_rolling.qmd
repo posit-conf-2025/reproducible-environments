@@ -24,11 +24,10 @@ format: revealjs
 
 ![](images/timeline.png)
 
-- ~3 weeks from issue identification to solution  
-- Fix deployed at source   
-- Highly collaborative and engaged package maintainers - THANK YOU!!   
+- ~3 weeks from issue identification to fix deployed at source  
+- Highly collaborative package maintainers - THANK YOU!!   
 
-## Deployment at Novartis
+## Deployment at Novartis{.smaller}
 
 ```{mermaid}
 timeline
@@ -41,9 +40,9 @@ timeline
 
 ```
 
-- Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level
+- Current package management is a hybrid of frozen and rolling
 - The rolling update is essential so we can use the latest, corrected version of packages
-- Implementation of rolling update could be improved using managed tools like ppm
+- Implementation of rolling update not yet connected with tools like PPM
 
 ## Conclusions
 
