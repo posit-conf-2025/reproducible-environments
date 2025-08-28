@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "index.html#today",
+    "href": "index.html#today",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Today",
+    "text": "Today\n\n\nTill 10.30am: A reflection on conversations to date\n10.30am: ☕ Coffee break\n11am: Hands-on\n12.30pm: 🍲 Lunch\n1.30pm: Hands-on part 2\n2pm: Small group session\n3pm: ☕ Coffee break\n3.30pm: Small group session part 2\n4.30pm: Wrap up"
+  },
+  {
+    "objectID": "index.html#our-aim",
+    "href": "index.html#our-aim",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Our aim",
+    "text": "Our aim\n\nExplore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
+  },
+  {
+    "objectID": "index.html#what-are-the-requirements-on-our-environment",
+    "href": "index.html#what-are-the-requirements-on-our-environment",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "What are the requirements on our environment?",
+    "text": "What are the requirements on our environment?"
+  },
+  {
+    "objectID": "index.html#who-are-the-stakeholders",
+    "href": "index.html#who-are-the-stakeholders",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Who are the stakeholders?",
+    "text": "Who are the stakeholders?"
+  },
+  {
+    "objectID": "index.html#doug-slides-roche-val-hub",
+    "href": "index.html#doug-slides-roche-val-hub",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Doug Slides (Roche + Val Hub)",
+    "text": "Doug Slides (Roche + Val Hub)"
+  },
+  {
+    "objectID": "index.html#why-novartis-wants-to-thaw-the-status-quo-james-orla",
+    "href": "index.html#why-novartis-wants-to-thaw-the-status-quo-james-orla",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Why Novartis wants to thaw the status quo (James & Orla)",
+    "text": "Why Novartis wants to thaw the status quo (James & Orla)"
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "?",
+    "text": "?"
+  },
+  {
+    "objectID": "index.html#aims-for-this-session",
+    "href": "index.html#aims-for-this-session",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Aims for this session",
+    "text": "Aims for this session"
+  },
+  {
+    "objectID": "index.html#logging-in",
+    "href": "index.html#logging-in",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Logging in",
+    "text": "Logging in"
+  },
+  {
+    "objectID": "index.html#goal",
+    "href": "index.html#goal",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Goal",
+    "text": "Goal\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/05-small-group.html",
+    "href": "sections/05-small-group.html",
+    "title": "Small group session",
+    "section": "",
+    "text": "A chance to design with your peers.\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/05-small-group.html#goal",
+    "href": "sections/05-small-group.html#goal",
+    "title": "Small group session",
+    "section": "",
+    "text": "Deliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/01-welcome.html",
+    "href": "sections/01-welcome.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Till 10.30am: A reflection on conversations to date\n10.30am: ☕ Coffee break\n11am: Hands-on\n12.30pm: 🍲 Lunch\n1.30pm: Hands-on part 2\n2pm: Small group session\n3pm: ☕ Coffee break\n3.30pm: Small group session part 2\n4.30pm: Wrap up\n\n\n\n\n\n\n\nExplore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
+  },
+  {
+    "objectID": "sections/01-welcome.html#today",
+    "href": "sections/01-welcome.html#today",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Till 10.30am: A reflection on conversations to date\n10.30am: ☕ Coffee break\n11am: Hands-on\n12.30pm: 🍲 Lunch\n1.30pm: Hands-on part 2\n2pm: Small group session\n3pm: ☕ Coffee break\n3.30pm: Small group session part 2\n4.30pm: Wrap up"
+  },
+  {
+    "objectID": "sections/01-welcome.html#our-aim",
+    "href": "sections/01-welcome.html#our-aim",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Explore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
+  }
+]
