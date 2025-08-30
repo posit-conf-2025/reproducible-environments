@@ -33,14 +33,14 @@ In the R ecosystem, there are two primary approaches to managing package environ
 - **Controlled updates**: Package updates happen deliberately and systematically
 
 ### Characteristics:
+
 - Uses system-wide or containerized package installations
-- Package versions remain constant until explicitly updated
 - Common in production environments, HPC clusters, and shared systems
 - Examples: Docker containers with fixed package versions, institutional R installations
 
 ### Pros:
 - High reproducibility
-- Predictable behavior
+- Easy to cache package install step
 - Reduced dependency conflicts
 - Suitable for production environments
 
@@ -141,8 +141,6 @@ options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2024-12-10"))
 # Initialize renv for your project
 renv::init()
 renv::status()
-
-
 ```
 
 2. **Install admiral**:
@@ -196,3 +194,7 @@ admiral::transform_range(
   target_range = c(0, 100)
 )
 ```
+
+### Abstracting `renv`
+
+GSK released an R package to the `pharmaverse` called [`slushy`](https://github.com/GSK-Biostatistics/slushy). This [PHUSE white paper](https://www.lexjansen.com/phuse-us/2025/os/PAP_OS12.pdf) has more details.
