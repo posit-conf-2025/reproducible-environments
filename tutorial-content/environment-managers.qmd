@@ -1,6 +1,12 @@
 ---
 title: Environment Management
+from: markdown+emoji
 ---
+
+```{r, setup, include = FALSE}
+library(dplyr)
+library(renv)
+```
 
 # Reproducible Analytics
 
@@ -30,17 +36,126 @@ this!
   and keeping project environments isolated.
 * `rix` leverages the `nix` package management ecosystem to distribute packages
   and build fully reproducible installs.
-* `r2u` leverages the ubuntu package ecosystem managed through `apt` to distribute R packages.
+* `r2u` leverages the Ubuntu package ecosystem managed through `apt` to
+  distribute R packages.
 * `packrat`: ("soft-deprecated") Predecessor to `renv`.
 
 Let's see a few examples in action.
 
-## `renv`
+## [`renv`](https://rstudio.github.io/renv/index.html)
 
+Represents the set of packages used in a project in an explicit `renv.lock`
+file, including the sources of the package and reproducibility metadata like
+md5 checksums. Also manages your local library to ensure that your global
+package library doesn't leak into your project environment.
 
+In fact, we used `renv` to make this presentation reproducible!
 
+### Quick Demo
 
+Just for demonstration, we'll swap over to a temporary directory to set up our
+`renv`.
 
+```{r, warning = FALSE}
+renv_proj_dir <- file.path(tempdir(), "renv-demo")
+dir.create(renv_proj_dir)
+setwd(renv_proj_dir)
+```
 
+```{r, change-wd-to-renv, include = FALSE}
+# just for knitting this document, tell knitr we'll be working in a
+# different directory
+knitr::opts_knit$set(root.dir = renv_proj_dir)
+```
 
+We'll initialize a project
 
+```{r}
+renv::init()
+```
+
+And add some analytic code to our project
+
+```{r}
+"
+library(dplyr)
+
+starwars |>
+  group_by(eye_color) |>
+  summarize(count = n()) |>
+  arrange(-count) |>
+  head(5)
+" |> 
+  write(file = file.path(renv_proj_dir, "analysis.R"))
+
+# add our new dependencies
+renv::install("dplyr")
+
+# snapshot our new project environment
+renv::snapshot()
+```
+
+Let's take a look at what `renv.lock` grabbed
+
+```{r}
+readLines(file.path(renv_proj_dir, "renv.lock")) |>
+  head(50) |>
+  paste(collapse = "\n") |>
+  cat()
+```
+
+## [`rix`](https://github.com/ropensci/rix/)
+
+::: {.callout-note}
+## `rix` Maturity
+
+`rix` uses the `nix` package manager, which can be used for all kinds of system
+dependencies. It is more comprehensive in its reproducibility, but is a less
+mature (in terms of years, users) ecosystem.
+:::
+
+::: {.callout-warning}
+## Private Packages
+
+`nix` expects fully reproducible declarative builds, which are in conflict 
+with _private_ repositories. If you need to use private packages, the best
+option is to vendor your own code.
+[ropensci/rix#452](https://github.com/ropensci/rix/issues/452#issuecomment-2725267329)
+:::
+
+If those haven't deterred you and you'd like to be on the leading edge of
+full system reproducibility, then `rix` offers the perfect solution.
+
+### Example Project Bootstrapping
+
+```{r, eval = FALSE}
+library(rix)
+
+path_default_nix <- "."
+
+rix(
+  r_ver = "4.3.3",                # Change to whatever R version you need
+  r_pkgs = c("dplyr", "ggplot2")  # Change to whatever packages you need
+  system_pkgs = NULL
+  git_pkgs = NULL,
+  ide = "code",
+  project_path = path_default_nix,
+  overwrite = TRUE,
+  print = TRUE
+)
+```
+
+## [`r2u`](https://eddelbuettel.github.io/r2u/)
+
+`r2u` _supplements_ a full reproducibility solution. It allows for **fast**
+installation of package binaries on a Debian-based system using a Debian
+software repository and `apt`.
+
+`r2u` could be used in conjunction with a container built on top of a
+Debian-based base image to build a container-based R environment.
+
+## [`slushy`](https://github.com/GSK-Biostatistics/slushy)
+
+`slushy` provides a wrapper around `renv` to make it a bit more accessible for
+evolving analytic environments. Designed to be _slightly less frozen_, slushy
+provides helpers for updating an `renv` after it's created.
