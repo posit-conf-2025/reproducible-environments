@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 .Rprofile
+*.Rproj
 .gitignore
 renv.lock
 presentation/index.html

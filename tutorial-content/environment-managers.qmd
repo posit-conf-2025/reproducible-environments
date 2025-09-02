@@ -1,0 +1,46 @@
+---
+title: Environment Management
+---
+
+# Reproducible Analytics
+
+Setting out to build a robust _statistical computing environment_ (SCE), we
+need to tackle reproducibility.
+
+Reprodubility is **always** a tradeoff. We want to land somewhere actionable,
+that is within our tolerance for error.
+
+| **What we manage**     | **How actionable it is** |
+| ---------------------- | ------------------------ |
+| Our scripts            | piece of :cake:          |
+| R package dependencies | :thinking:               |
+| R version              | :thinking:               |
+| System libraries       | :confounded:             |
+| OS                     | :confounded:             |
+| System architecture    | :weary:                  |
+| Fluke gamma radiation  | :dizzy_face:             |
+
+# Tools
+
+We'll assume we know how to reproducibly hand our code off. The next step
+is managing our R version and dependencies. There are a ton of great tools for
+this!
+
+* `renv`: an R-based tool for reproducibly installing local R package libraries
+  and keeping project environments isolated.
+* `rix` leverages the `nix` package management ecosystem to distribute packages
+  and build fully reproducible installs.
+* `r2u` leverages the ubuntu package ecosystem managed through `apt` to distribute R packages.
+* `packrat`: ("soft-deprecated") Predecessor to `renv`.
+
+Let's see a few examples in action.
+
+## `renv`
+
+
+
+
+
+
+
+
