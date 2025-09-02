@@ -1,0 +1,89 @@
+---
+title: Containers
+from: markdown+emoji
+---
+
+```{r, setup, include = FALSE}
+```
+
+# What do we get from containers?
+
+Containers providing a definitive starting point for analysis. As its name
+suggests, it _contains_ everything you need to run your code. If it talks to the
+outside world, it's only because you've allowed it to. This means that we can
+use it to our advantage to lock down some analysis expectations.
+
+Let's consider a few different designs:
+
+## "Batteries Included"
+
+We may consider building our container to include
+
+- The exact R version we want
+- All the system libraries that our R dependencies might need
+- The R dependencies themselves
+- We may even want to copy our analysis files into the container itself so that
+  all anyone needs is the container.
+  
+This might be preferred for things like application deployments, where you want
+to ensure reproducibility and expect infrequent updates. You may not mind, and
+maybe even prefer, that everything is wrapped in a single file.
+
+## Just the environment
+
+When you want to allow more fluidity -- for example, allowing users to install
+new packages -- you may consider mixing a container with a tool like `renv`. 
+Here we split up our reproducibility requirements. 
+
+* **Container**: Manages our environment; the R installation and system
+  libraries.
+
+* **`renv`**: Manages our R package installations
+
+Here we may start with an R image, which then bootstraps our packages in an
+ephemeral or mounted volume.
+
+This solution might be preferred if many users with slightly different needs
+all want to align on a similar baseline for their environment.
+
+# Do containers _solve_ reproducibility?
+
+Absolutely not! But maybe they come _close enough_. Given a relatively simple
+`Containerfile`, let's check our assumptions:
+
+```{.dockerfile}
+FROM rocker/verse                                                       # <1>
+
+RUN apt-get update && apt-get install -y curl                           # <2>
+
+RUN R -e 'install.packages("tidyverse")'                                # <3>
+COPY analysis.R $HOME/analysis.R                                        # <4>
+
+CMD ["Rscript", "analysis.R"]
+```
+
+1. `rocker/verse` might be interpretted differently depending on your container
+   runtime. `docker` will expand this to `https://docker.io/rocker/verse:latest`,
+   but the fully-qualified path is _inferred_.  
+   Similarly, the assumed tag, `latest` is a floating tag. The image may change
+   the next time the container is built.
+2. However system libraries are installed in your image's distribution of choice,
+   they can likely receive updates and may not be identical the next time you
+   build your image.
+3. When we `install.packages`, the repository is determined by our base image. 
+   If the repository changes or if the package is updated in the same repository
+   we'll get a different version of the package on the next build.
+4. Of course, if we update our analysis and copy a new version into our image,
+   expectedly, the analysis with change.
+   
+It's critical to be aware of what _can_ change. Even if our _Containerfile_
+recipe stays the same, our built container may change.
+
+If you plan to use containers, it is very helpful to use the container hash when
+building expectations for reproducibility.
+
+# Managing the evolving needs of a statistical environment
+
+
+
+
