@@ -14,26 +14,52 @@ Orla Doyle
 
 - At Novartis we were testing the {rbmi} package for multiple imputation
 - We weren't able to reproduce our results 
-- The underlying algorithm is deterministic so this shouldn't be the case
+- The underlying algorithm is deterministic so this was unexpected
 - The magnitude of the difference was enough to change the scientific conclusions
+
+
 
 ## Reproducibility Detective Work
 
 **Did we set the seed?** *Yes!*  
 **Is this related to hardware?** *No!*   
 **Is this a problem with a specific OS linear algebra library?** *No!*  
-**Injected custom code into {rbmi} to localise the issue:** *Problem originates from {rbmi} dependencies.*     
 
-![](images/rbmi_deps.png)
 
+## Open-source in action
+
+Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers. 
+
+
+::: {style="font-size: 50%;"}
+- {rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420
+- {mmrm} issue: https://github.com/openpharma/mmrm/issues/462
+- {TMB} issue: https://github.com/kaskr/adcomp/issues/398 
+:::
+
+![](../images/rbmi_deps.png)
 
 ## Collaborated with package maintainers to implement the fix
 
-![](images/timeline.png)
+![](../images/timeline.png)
 
+
+:::: {.columns}
+
+::: {.column width="70%"}
 - ~3 weeks from issue identification to solution  
 - Fix deployed at source   
 - Highly collaborative and engaged package maintainers - THANK YOU!!   
+:::
+
+::: {.column width="30%"}
+![](../logos/roche-logo.png){width=50%}
+<br>
+![](../logos/rconis.png){width=30%}
+![](../logos/openstatsware.svg){width=30%}
+:::
+
+:::
 
 ## Deployment at Novartis
 
