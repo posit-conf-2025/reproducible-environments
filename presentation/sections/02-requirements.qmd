@@ -4,6 +4,84 @@
 
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/ala69u8nw9124vkw937hhufm1245bspv/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
-## What are the requirements on our environment?
+## You've got to roll with it!
 
-## Who are the stakeholders?
+A summary of experiences at Novartis.
+
+Orla Doyle
+
+## Adopting new tools 
+
+- At Novartis we were testing the {rbmi} package for multiple imputation
+- We weren't able to reproduce our results 
+- The underlying algorithm is deterministic so this was unexpected
+- The magnitude of the difference was enough to change the scientific conclusions
+
+
+
+## Reproducibility Detective Work
+
+**Did we set the seed?** *Yes!*  
+**Is this related to hardware?** *No!*   
+**Is this a problem with a specific OS linear algebra library?** *No!*  
+
+
+## Open-source in action
+
+Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers. 
+
+
+::: {style="font-size: 50%;"}
+- {rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420
+- {mmrm} issue: https://github.com/openpharma/mmrm/issues/462
+- {TMB} issue: https://github.com/kaskr/adcomp/issues/398 
+:::
+
+![](../images/rbmi_deps.png)
+
+## Collaborated with package maintainers to implement the fix
+
+![](../images/timeline.png)
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+- ~3 weeks from issue identification to solution  
+- Fix deployed at source   
+- Highly collaborative and engaged package maintainers - THANK YOU!!   
+:::
+
+::: {.column width="30%"}
+![](../logos/roche-logo.png){width=50%}
+<br>
+![](../logos/rconis.png){width=30%}
+![](../logos/openstatsware.svg){width=30%}
+:::
+
+:::
+
+## Deployment at Novartis
+
+```{mermaid}
+timeline
+    title Frozen R environments with ~6 month refresh
+    H123 : R4.1.0 bundle 1
+    H223 : R4.1.0 bundle 2
+    H124 : R4.3.1 bundle 1
+    H224 : R4.3.1 bundle 2
+         : Project-level bundle using an adhoc, GxP install
+
+```
+
+- Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level
+- The rolling update is essential so we can use the latest, corrected version of packages
+- Implementation of rolling update could be improved using managed tools like ppm
+
+## Conclusions
+
+- The packages we rely on are in a constant state of flux: this is a feature not a bug! 
+- Our approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions 
+
+
+
