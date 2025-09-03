@@ -14,18 +14,53 @@
     "text": "Our aim\n\nExplore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
   },
   {
-    "objectID": "index.html#what-are-the-requirements-on-our-environment",
-    "href": "index.html#what-are-the-requirements-on-our-environment",
+    "objectID": "index.html#youve-got-to-roll-with-it",
+    "href": "index.html#youve-got-to-roll-with-it",
     "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "What are the requirements on our environment?",
-    "text": "What are the requirements on our environment?"
+    "section": "You’ve got to roll with it!",
+    "text": "You’ve got to roll with it!\nA summary of experiences at Novartis.\nOrla Doyle"
   },
   {
-    "objectID": "index.html#who-are-the-stakeholders",
-    "href": "index.html#who-are-the-stakeholders",
+    "objectID": "index.html#adopting-new-tools",
+    "href": "index.html#adopting-new-tools",
     "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "Who are the stakeholders?",
-    "text": "Who are the stakeholders?"
+    "section": "Adopting new tools",
+    "text": "Adopting new tools\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+  },
+  {
+    "objectID": "index.html#reproducibility-detective-work",
+    "href": "index.html#reproducibility-detective-work",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Reproducibility Detective Work",
+    "text": "Reproducibility Detective Work\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
+  },
+  {
+    "objectID": "index.html#open-source-in-action",
+    "href": "index.html#open-source-in-action",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Open-source in action",
+    "text": "Open-source in action\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
+  },
+  {
+    "objectID": "index.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "href": "index.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Collaborated with package maintainers to implement the fix",
+    "text": "Collaborated with package maintainers to implement the fix\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
+  },
+  {
+    "objectID": "index.html#deployment-at-novartis",
+    "href": "index.html#deployment-at-novartis",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Deployment at Novartis",
+    "text": "Deployment at Novartis\n\n#| child: \"sections/02-requirements.qmd\"\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n#| child: \"sections/02-requirements.qmd\"\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+  },
+  {
+    "objectID": "index.html#conclusions",
+    "href": "index.html#conclusions",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Conclusions",
+    "text": "Conclusions\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "index.html#doug-slides-roche-val-hub",
@@ -53,7 +88,7 @@
     "href": "index.html#aims-for-this-session",
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Aims for this session",
-    "text": "Aims for this session"
+    "text": "Aims for this session\n\nExplore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
   },
   {
     "objectID": "index.html#logging-in",
@@ -68,6 +103,62 @@
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Goal",
     "text": "Goal\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/02-requirements.html",
+    "href": "sections/02-requirements.html",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "A summary of experiences at Novartis.\nOrla Doyle\n\n\n\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+  },
+  {
+    "objectID": "sections/02-requirements.html#youve-got-to-roll-with-it",
+    "href": "sections/02-requirements.html#youve-got-to-roll-with-it",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "A summary of experiences at Novartis.\nOrla Doyle"
+  },
+  {
+    "objectID": "sections/02-requirements.html#adopting-new-tools",
+    "href": "sections/02-requirements.html#adopting-new-tools",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "At Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+  },
+  {
+    "objectID": "sections/02-requirements.html#reproducibility-detective-work",
+    "href": "sections/02-requirements.html#reproducibility-detective-work",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "Did we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
+  },
+  {
+    "objectID": "sections/02-requirements.html#open-source-in-action",
+    "href": "sections/02-requirements.html#open-source-in-action",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
+  },
+  {
+    "objectID": "sections/02-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "href": "sections/02-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
+  },
+  {
+    "objectID": "sections/02-requirements.html#deployment-at-novartis",
+    "href": "sections/02-requirements.html#deployment-at-novartis",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "timeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+  },
+  {
+    "objectID": "sections/02-requirements.html#conclusions",
+    "href": "sections/02-requirements.html#conclusions",
+    "title": "What is our aim?",
+    "section": "",
+    "text": "The packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "sections/05-small-group.html",
@@ -103,5 +194,19 @@
     "title": "Welcome!",
     "section": "",
     "text": "Explore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
+  },
+  {
+    "objectID": "sections/04-hands-on.html",
+    "href": "sections/04-hands-on.html",
+    "title": "Hands on section",
+    "section": "",
+    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
+  },
+  {
+    "objectID": "sections/04-hands-on.html#aims-for-this-session",
+    "href": "sections/04-hands-on.html#aims-for-this-session",
+    "title": "Hands on section",
+    "section": "",
+    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
   }
 ]
