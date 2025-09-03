@@ -3,9 +3,16 @@
 .RData
 .Ruserdata
 .Rprofile
+*.Rproj
 .gitignore
 renv.lock
 presentation/index.html
 presentation/index_files/
 renv/activate.R
 .gitignore
+
+# renv files
+*.html
+**/*_files
+**/_freeze
+**/_site
