@@ -57,8 +57,8 @@ Target Audience: This workshop is ideal for data scientists, statisticians, IT p
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 09:30 | Welcome and intros |
-| 09:30 - 10:30 | **A reflection on conversations to date**<br>🗺️ What are we aiming to deliver against your risk tolerance to provide a repoducible environment? (20m)<br>🏢 Industry perspectives and an 👋 Introduction to the R Validation Hub and Regulatory Repo (20m)<br>🗣️ Discussion (20m) |
+| 09:00 - 09:15 | Welcome and intros |
+| 09:15 - 10:30 | **A reflection on conversations to date**<br>🗺️ What are we aiming to deliver against your risk tolerance to provide a repoducible environment? (20m)<br>🏢 Industry perspectives and an 👋 Introduction to the R Validation Hub and Regulatory Repo (20m)<br>🗣️ Discussion (20m) |
 | 10:30 - 11:00 | *Coffee break*   |
 | 11:00 - 12:30 | **Posit workbench part 1**<br>👋 Introduction to our environment, and setting up and inspecting auditable job<br>🗣️ Discussion |
 | 12:30 - 13:30 | *Lunch break*    |
@@ -67,6 +67,23 @@ Target Audience: This workshop is ideal for data scientists, statisticians, IT p
 | 15:00 - 15:30 | *Coffee break*   |
 | 15:30 - 16:30 | **Small group presentations**<br>• 10 minutes + 5 minutes per group (3 groups)<br>*Some question prompts to tackle on how packages are used in the controlled environments:*<br>❓ What is the process for 'published' CRAN/Bioconductor packages?<br>❓ What is the process for Github/Gitlab packages?<br>❓ What is the process for internal packages?<br>❓ How are new packages deployed into an ongoing project? |
 | 16:30 - 17:00 | Wrap up and call for next steps      |
+
+Intro:
+      - James add placeholder (one slide for all) for facilititor (<5)
+      - Share agenda 10 mins
+
+The why - Rafeal (10+5 mins)
+-- case study for why - rbmi use case - James/Orla (10+5 mins)
+R validation hub + regulatory repo - Doug (10+5 mins)
+What is repoducibility (include mention of risk tolerance is not fixed and this is tech not scientific repro - as big pharma to start up biotech / academia presence) - Michael (10+5 mins)
+
+
+Welcome to the environmet - Michael - 15m
+Doug hands on - 30m
+Michael - Audited jobs demo - 30m
+Rolling vs Frozen hands on - 30m
+
+Q&A - 15m
 
 
 ## Instructor(s)
