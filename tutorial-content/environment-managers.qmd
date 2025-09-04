@@ -39,6 +39,8 @@ this!
 * `r2u` leverages the Ubuntu package ecosystem managed through `apt` to
   distribute R packages.
 * `packrat`: ("soft-deprecated") Predecessor to `renv`.
+* `pak`: a fresh approach to R package installation. Allows for highly parallel package installations, auto-detects and installs system dependencies.
+* `rv`: a rust-based tool to install R packages in a reproducible, fast, and declarative way, similarly to `uv` in the python ecosystem. 
 
 Let's see a few examples in action.
 
@@ -110,8 +112,8 @@ readLines(file.path(renv_proj_dir, "renv.lock")) |>
 ## `rix` Maturity
 
 `rix` uses the `nix` package manager, which can be used for all kinds of system
-dependencies. It is more comprehensive in its reproducibility, but is a less
-mature (in terms of years, users) ecosystem.
+dependencies. It is more comprehensive in its reproducibility, but the R package is less
+mature (in terms of years, users) ecosystem. The NIX ecosystem however exists since at least 2006.
 :::
 
 ::: {.callout-warning}
@@ -135,8 +137,8 @@ path_default_nix <- "."
 
 rix(
   r_ver = "4.3.3",                # Change to whatever R version you need
-  r_pkgs = c("dplyr", "ggplot2")  # Change to whatever packages you need
-  system_pkgs = NULL
+  r_pkgs = c("dplyr", "ggplot2"),  # Change to whatever packages you need
+  system_pkgs = NULL,
   git_pkgs = NULL,
   ide = "code",
   project_path = path_default_nix,
@@ -159,3 +161,64 @@ Debian-based base image to build a container-based R environment.
 `slushy` provides a wrapper around `renv` to make it a bit more accessible for
 evolving analytic environments. Designed to be _slightly less frozen_, slushy
 provides helpers for updating an `renv` after it's created.
+
+## [`pak`](https://pak.r-lib.org/)
+
+A fresh approach to package installation. Enables full reproducibility like renv. More a tool for data science or system admins. Speeds up package installations by parallelizing the install process all the way. Very helpful with detecting operating system dependencies (can be automatically be installed when run with admin privileges). 
+
+### Quick demo
+
+The below will install tidyverse including all R dependencies, fully in parallel. 
+
+```{r, eval = FALSE}
+# Let's install tidyverse
+pak::pak("tidyverse")
+```
+
+::: {.callout-note}
+## `pak` parallelism
+
+With the release of R 4.5.0, package installation in R via `install.packages()` has been sped up by downloading packages in parallel. `pak` will not only download packages in parallel, it will also compile, build and install them in parallel, leading to further efficiency gains. 
+:::
+
+### System dependencies 
+
+Very often R package installation fails due to missing system dependencies. In such cases pak can help any user to figure out which OS packages need to be installed by running 
+
+```{r, eval = FALSE} 
+pak::pkg_sysreqs("sf")
+```
+
+which produce an output similar to (example is for a system running on Ubunut 20.04 (Focal)) 
+```
+── Install scripts ────────────────────────────────────────────────────────────────────────────────────── Ubuntu 20.04 ──
+apt-get -y update
+apt-get -y install cmake libssl-dev libgdal-dev gdal-bin libgeos-dev libproj-dev libsqlite3-dev libudunits2-dev
+
+── Packages and their system dependencies ───────────────────────────────────────────────────────────────────────────────
+s2    – cmake, libssl-dev
+sf    – gdal-bin, libgdal-dev, libgeos-dev, libproj-dev, libsqlite3-dev
+units – libudunits2-dev
+```
+
+::: {.callout-note}
+## Good to know
+
+If `pak::pak()` is run with admin privileges, not only all the R packages are being installed but also any missing system dependency will be installed. 
+:::
+
+### Reproducibility
+
+Reproducibility can be achieved via lock files, similarly to renv. 
+
+```{r, eval = FALSE}
+# Let's create a lockfile for reproducibility
+pak::lockfile_create()
+
+# We can use the created pkg.lock file any time on another system to run 
+pak::lockfile_install()
+```
+
+## [`rv`](https://a2-ai.github.io/rv-docs/)
+
+`rv` is a fairly new tool that lives outside of R and needs to be called from the command line. It can be compared with [`uv`](https://docs.astral.sh/uv/) in the python ecosystem. There is good information in the [Getting Started Guide](https://a2-ai.github.io/rv-docs/intro/getting-started/).
