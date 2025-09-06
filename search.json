@@ -98,6 +98,13 @@
     "text": "Logging in"
   },
   {
+    "objectID": "index.html#there-is-no-industry-standard-for-deliverying-environments",
+    "href": "index.html#there-is-no-industry-standard-for-deliverying-environments",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "There is no industry standard for deliverying environments",
+    "text": "There is no industry standard for deliverying environments\n\nWe want to hear your proposals!"
+  },
+  {
     "objectID": "index.html#goal",
     "href": "index.html#goal",
     "title": "Deploying reproducible analytics environments for regulated use cases",
@@ -165,7 +172,14 @@
     "href": "sections/05-small-group.html",
     "title": "Small group session",
     "section": "",
-    "text": "A chance to design with your peers.\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+    "text": "A chance to design with your peers.\n\n\n\nWe want to hear your proposals!\n\n\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/05-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
+    "href": "sections/05-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
+    "title": "Small group session",
+    "section": "",
+    "text": "We want to hear your proposals!"
   },
   {
     "objectID": "sections/05-small-group.html#goal",
