@@ -2,6 +2,10 @@
 
 A chance to design with your peers.
 
+## There is no industry standard for deliverying environments
+
+- We want to hear your proposals!
+
 ## Goal
 
 ::: {.columns}
