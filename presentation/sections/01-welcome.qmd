@@ -2,6 +2,43 @@
 
 ![](https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif){fig-align="center" width="400px"}
 
+## Your facilitators
+
+
+::: columns
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+
+**Doug Kelkhoff**  
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+
+**Michael Mayer**  
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+
+**Rafael Pereira**  
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/143631826?v=4){fig-round=true width="100px"}
+
+**Orla Doyle**  
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+
+**James Black**  
+:::
+
+:::
+
 ## Today
 
 ::: {style="font-size: 90%;"}
