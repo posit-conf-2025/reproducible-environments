@@ -104,7 +104,9 @@ _Being rigorous is a lot of work, but most of it can be automated_
 
 ![](images/rvh-logo.svg){.absolute top=25px right=50px}
 
-```r
+```{r}
+#| eval: false
+
 options(
   repos = repo, 
   val.criterion.repos = repo,
