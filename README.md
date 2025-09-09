@@ -71,7 +71,7 @@ Target Audience: This workshop is ideal for data scientists, statisticians, IT p
 
 ## Hands on session details
 
-Welcome to the environmet - Michael - 15m
+Welcome to the environment - Michael - 15m
 Doug hands on - 30m
 Michael - Audited jobs demo - 30m
 Rolling vs Frozen hands on - 30m
