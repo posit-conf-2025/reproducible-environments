@@ -64,6 +64,7 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 ## Deployment at Novartis
 
 ```{mermaid}
+%%| echo: false
 timeline
     title Frozen R environments with ~6 month refresh
     H123 : R4.1.0 bundle 1
@@ -71,7 +72,6 @@ timeline
     H124 : R4.3.1 bundle 1
     H224 : R4.3.1 bundle 2
          : Project-level bundle using an adhoc, GxP install
-
 ```
 
 - Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level

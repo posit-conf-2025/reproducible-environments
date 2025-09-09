@@ -26,22 +26,12 @@ execute:
   freeze: auto
 ---
 
-```{r}
-#| child: "sections/01-welcome.qmd"
-```
+{{< include sections/01-welcome.qmd >}}
 
-```{r}
-#| child: "sections/02-requirements.qmd"
-```
+{{< include sections/02-requirements.qmd >}}
 
-```{r}
-#| child: "sections/03-perspectives.qmd"
-```
+{{< include sections/03-perspectives.qmd >}}
 
-```{r}
-#| child: "sections/04-hands-on.qmd"
-```
+{{< include sections/04-hands-on.qmd >}}
 
-```{r}
-#| child: "sections/05-small-group.qmd"
-```
+{{< include sections/05-small-group.qmd >}}
