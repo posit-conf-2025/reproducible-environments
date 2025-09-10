@@ -8,7 +8,7 @@
 ::: columns
 
 ::: {.column width="20%"}
-![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+![](https://avatars.githubusercontent.com/u/18220321?v=4){fig-round=true width="100px"}
 
 **Doug Kelkhoff**  
 :::

@@ -1,6 +1,128 @@
 # Industry perspectives {.center}
 
-## Doug Slides (Roche + Val Hub)
+## Sustainable Software at Roche
+
+```{css, echo = FALSE}
+.dropshadow {
+  padding: 0.3em;
+  filter: drop-shadow(0 0.05em 0.2em #0004);
+}
+
+.roche-status {
+  border-radius: 0.5em;
+  padding: 0 0.5em;
+  width: min-content;
+
+  &.success {
+    color: white;
+    background: #282;
+  }
+  
+  &.remediate {
+    color: white;
+    background: #B62;
+  }
+}
+```
+
+:::: {.columns}
+
+::: {.column .r-fit-text width="30%"}
+_Balancing rigor with effective data science_
+
+Software quality is a risk, but so are outdated software and reluctant data
+scientists.
+:::
+
+::: {.column width="70%"}
+![](images/roche-workflow.png){ .dropshadow .padded }
+:::
+
+::::
+
+## Automating the busy work
+
+::: {.notes}
+**speaker**: Doug
+* automated quality checks: high bar for documentation & code coverage
+* manual review: community adoption, author reputation, test quality
+:::
+
+_Being rigorous is a lot of work, but most of it can be automated_
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/roche-package-validation.png){ .dropshadow .padded height=450px }
+:::
+
+::: {.column .r-fit-text width="50%"}
+#### success {.roche-status .success}
+
+* Report produced as CI artifact
+* Package published to internal Posit Package Manager
+
+#### requires remediation {.roche-status .remediate}
+
+* Package requires manual review
+* Support team R experts review package, either  
+  ✅ justifying gaps  
+  ❌ or rejecting  
+:::
+
+::::
+
+## The R Validation Hub
+### Who we are
+
+![](images/rvh-logo.svg){.absolute top=25px right=50px}
+
+* Started here! R/Pharma 2018
+* Operating under the R Consortium
+* Delivered a [white paper](https://pharmar.org/white-paper/) that outlines
+  what R validation could look like.
+* Launched `{riskmetric}`, `{riskassessment}` shiny app
+
+## The R Validation Hub
+### Next! 
+
+![](images/rvh-logo.svg){.absolute top=25px right=50px}
+
+* RVH tools re-imagined:  
+  `{val.meter}`, `{val.report}`, `{val.repo}`
+* Building a public metric repository
+
+## The R Validation Hub
+### Building consensus
+
+![](images/rvh-logo.svg){.absolute top=25px right=50px}
+
+![](images/rvh-metric-repo-workflow.png){ .dropshadow .padded height=1050px }
+
+## The R Validation Hub
+### Building consensus
+
+![](images/rvh-logo.svg){.absolute top=25px right=50px}
+
+```{r}
+#| eval: false
+
+options(
+  repos = repo, 
+  val.criterion.repos = repo,
+  available_packages_filters = 
+    package_filter(check_errors == 0 & percentile(downloads) >= 0.25)
+)
+
+available.packages()
+#> ℹ excluding 3 packages according to package filtering policy
+
+install.package(poor_quality_pkg)
+#> Error in `install.packages()`:
+#> ! required packages are excluded due to package filters
+#>   "poor_quality_pkg"
+#> ℹ To explain, use `val.criterion::last_rejected()`
+```
 
 ## Why Novartis wants to thaw the status quo (James & Orla)
 
