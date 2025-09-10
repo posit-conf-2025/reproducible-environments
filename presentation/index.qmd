@@ -28,10 +28,12 @@ execute:
 
 {{< include sections/01-welcome.qmd >}}
 
-{{< include sections/02-requirements.qmd >}}
+{{< include sections/02-why.qmd >}}
 
-{{< include sections/03-perspectives.qmd >}}
+{{< include sections/03-requirements.qmd >}}
 
-{{< include sections/04-hands-on.qmd >}}
+{{< include sections/04-perspectives.qmd >}}
 
-{{< include sections/05-small-group.qmd >}}
+{{< include sections/05-hands-on.qmd >}}
+
+{{< include sections/06-small-group.qmd >}}
