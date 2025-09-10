@@ -60,7 +60,7 @@
     "href": "index.html#deployment-at-novartis",
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Deployment at Novartis",
-    "text": "Deployment at Novartis\n\n#| child: \"sections/02-requirements.qmd\"\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n#| child: \"sections/02-requirements.qmd\"\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
   },
   {
     "objectID": "index.html#conclusions",
@@ -70,11 +70,46 @@
     "text": "Conclusions\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
-    "objectID": "index.html#doug-slides-roche-val-hub",
-    "href": "index.html#doug-slides-roche-val-hub",
+    "objectID": "index.html#sustainable-software-at-roche",
+    "href": "index.html#sustainable-software-at-roche",
     "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "Doug Slides (Roche + Val Hub)",
-    "text": "Doug Slides (Roche + Val Hub)"
+    "section": "Sustainable Software at Roche",
+    "text": "Sustainable Software at Roche\n\n\n\n\n\nBalancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists."
+  },
+  {
+    "objectID": "index.html#automating-the-busy-work",
+    "href": "index.html#automating-the-busy-work",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Automating the busy work",
+    "text": "Automating the busy work\n\nspeaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\nsuccess\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\nrequires remediation\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting"
+  },
+  {
+    "objectID": "index.html#the-r-validation-hub",
+    "href": "index.html#the-r-validation-hub",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "The R Validation Hub",
+    "text": "The R Validation Hub\nWho we are\n\n\nStarted here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app"
+  },
+  {
+    "objectID": "index.html#the-r-validation-hub-1",
+    "href": "index.html#the-r-validation-hub-1",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "The R Validation Hub",
+    "text": "The R Validation Hub\nNext!\n\n\nRVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository"
+  },
+  {
+    "objectID": "index.html#the-r-validation-hub-2",
+    "href": "index.html#the-r-validation-hub-2",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "The R Validation Hub",
+    "text": "The R Validation Hub\nBuilding consensus"
+  },
+  {
+    "objectID": "index.html#the-r-validation-hub-3",
+    "href": "index.html#the-r-validation-hub-3",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "The R Validation Hub",
+    "text": "The R Validation Hub\nBuilding consensus\n\n\noptions(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
   },
   {
     "objectID": "index.html#why-novartis-wants-to-thaw-the-status-quo-james-orla",
@@ -123,7 +158,7 @@
     "href": "sections/02-requirements.html",
     "title": "What is our aim?",
     "section": "",
-    "text": "A summary of experiences at Novartis.\nOrla Doyle\n\n\n\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+    "text": "A summary of experiences at Novartis.\nOrla Doyle\n\n\n\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "sections/02-requirements.html#youve-got-to-roll-with-it",
@@ -165,7 +200,7 @@
     "href": "sections/02-requirements.html#deployment-at-novartis",
     "title": "What is our aim?",
     "section": "",
-    "text": "timeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+    "text": "timeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
   },
   {
     "objectID": "sections/02-requirements.html#conclusions",
@@ -236,5 +271,47 @@
     "title": "Hands on section",
     "section": "",
     "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
+  },
+  {
+    "objectID": "sections/03-perspectives.html",
+    "href": "sections/03-perspectives.html",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists.\n\n\n\n\n\n\n\n\nspeaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting\n\n\n\n\n\n\n\n\n\n\n\n\nStarted here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app\n\n\n\n\n\n\n\n\n\nRVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noptions(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
+  },
+  {
+    "objectID": "sections/03-perspectives.html#sustainable-software-at-roche",
+    "href": "sections/03-perspectives.html#sustainable-software-at-roche",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists."
+  },
+  {
+    "objectID": "sections/03-perspectives.html#automating-the-busy-work",
+    "href": "sections/03-perspectives.html#automating-the-busy-work",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "speaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting"
+  },
+  {
+    "objectID": "sections/03-perspectives.html#the-r-validation-hub",
+    "href": "sections/03-perspectives.html#the-r-validation-hub",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "Started here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app"
+  },
+  {
+    "objectID": "sections/03-perspectives.html#the-r-validation-hub-1",
+    "href": "sections/03-perspectives.html#the-r-validation-hub-1",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "RVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository"
+  },
+  {
+    "objectID": "sections/03-perspectives.html#the-r-validation-hub-3",
+    "href": "sections/03-perspectives.html#the-r-validation-hub-3",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "options(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
   }
 ]

@@ -222,7 +222,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <h2>Your facilitators</h2>
 <div class="columns">
 <div class="column" style="width:20%;">
-<p><img data-src="https://avatars.githubusercontent.com/u/2760096?v=4.png" data-fig-round="true" width="100"></p>
+<p><img data-src="https://avatars.githubusercontent.com/u/18220321?v=4.png" data-fig-round="true" width="100"></p>
 <p><strong>Doug Kelkhoff</strong></p>
 </div><div class="column" style="width:20%;">
 <p><img data-src="https://avatars.githubusercontent.com/u/2760096?v=4.png" data-fig-round="true" width="100"></p>
@@ -327,27 +327,17 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <section id="deployment-at-novartis" class="slide level2">
 <h2>Deployment at Novartis</h2>
 <div class="cell" data-reveal="true" data-layout-align="default">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>#| child: "sections/02-requirements.qmd"</span>
-<span id="cb1-2"><a></a>timeline</span>
-<span id="cb1-3"><a></a>    title Frozen R environments with ~6 month refresh</span>
-<span id="cb1-4"><a></a>    H123 : R4.1.0 bundle 1</span>
-<span id="cb1-5"><a></a>    H223 : R4.1.0 bundle 2</span>
-<span id="cb1-6"><a></a>    H124 : R4.3.1 bundle 1</span>
-<span id="cb1-7"><a></a>    H224 : R4.3.1 bundle 2</span>
-<span id="cb1-8"><a></a>         : Project-level bundle using an adhoc, GxP install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">#| child: "sections/02-requirements.qmd"
-timeline
+<pre class="mermaid mermaid-js">timeline
     title Frozen R environments with ~6 month refresh
     H123 : R4.1.0 bundle 1
     H223 : R4.1.0 bundle 2
     H124 : R4.3.1 bundle 1
     H224 : R4.3.1 bundle 2
          : Project-level bundle using an adhoc, GxP install
-
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -372,8 +362,123 @@ timeline
 <h1>Industry perspectives</h1>
 
 </section>
-<section id="doug-slides-roche-val-hub" class="slide level2">
-<h2>Doug Slides (Roche + Val Hub)</h2>
+<section id="sustainable-software-at-roche" class="slide level2">
+<h2>Sustainable Software at Roche</h2>
+<div class="cell">
+<style type="text/css">
+.dropshadow {
+  padding: 0.3em;
+  filter: drop-shadow(0 0.05em 0.2em #0004);
+}
+
+.roche-status {
+  border-radius: 0.5em;
+  padding: 0 0.5em;
+  width: min-content;
+
+  &.success {
+    color: white;
+    background: #282;
+  }
+  
+  &.remediate {
+    color: white;
+    background: #B62;
+  }
+}
+</style>
+</div>
+<div class="columns">
+<div class="column r-fit-text" style="width:30%;">
+<p><em>Balancing rigor with effective data science</em></p>
+<p>Software quality is a risk, but so are outdated software and reluctant data scientists.</p>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/roche-workflow.png" class="dropshadow padded"></p>
+</div></div>
+</section>
+<section id="automating-the-busy-work" class="slide level2">
+<h2>Automating the busy work</h2>
+<aside class="notes">
+<p><strong>speaker</strong>: Doug * automated quality checks: high bar for documentation &amp; code coverage * manual review: community adoption, author reputation, test quality</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><em>Being rigorous is a lot of work, but most of it can be automated</em></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/roche-package-validation.png" class="dropshadow padded" height="450"></p>
+</div><div class="column r-fit-text" style="width:50%;">
+<h4 class="roche-status success" id="success">success</h4>
+<ul>
+<li>Report produced as CI artifact</li>
+<li>Package published to internal Posit Package Manager</li>
+</ul>
+<h4 class="roche-status remediate" id="requires-remediation">requires remediation</h4>
+<ul>
+<li>Package requires manual review</li>
+<li>Support team R experts review package, either<br>
+✅ justifying gaps<br>
+❌ or rejecting<br>
+</li>
+</ul>
+</div></div>
+</section>
+<section id="the-r-validation-hub" class="slide level2">
+<h2>The R Validation Hub</h2>
+<h3 id="who-we-are">Who we are</h3>
+<p><img data-src="images/rvh-logo.svg" class="absolute" style="top: 25px; right: 50px; "></p>
+<ul>
+<li>Started here! R/Pharma 2018</li>
+<li>Operating under the R Consortium</li>
+<li>Delivered a <a href="https://pharmar.org/white-paper/">white paper</a> that outlines what R validation could look like.</li>
+<li>Launched <code>{riskmetric}</code>, <code>{riskassessment}</code> shiny app</li>
+</ul>
+</section>
+<section id="the-r-validation-hub-1" class="slide level2">
+<h2>The R Validation Hub</h2>
+<h3 id="next">Next!</h3>
+<p><img data-src="images/rvh-logo.svg" class="absolute" style="top: 25px; right: 50px; "></p>
+<ul>
+<li>RVH tools re-imagined:<br>
+<code>{val.meter}</code>, <code>{val.report}</code>, <code>{val.repo}</code></li>
+<li>Building a public metric repository</li>
+</ul>
+</section>
+<section id="the-r-validation-hub-2" class="slide level2">
+<h2>The R Validation Hub</h2>
+<h3 id="building-consensus">Building consensus</h3>
+<p><img data-src="images/rvh-logo.svg" class="absolute" style="top: 25px; right: 50px; "></p>
+<p><img data-src="images/rvh-metric-repo-workflow.png" class="dropshadow padded" height="1050"></p>
+</section>
+<section id="the-r-validation-hub-3" class="slide level2">
+<h2>The R Validation Hub</h2>
+<h3 id="building-consensus-1">Building consensus</h3>
+<p><img data-src="images/rvh-logo.svg" class="absolute" style="top: 25px; right: 50px; "></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">options</span>(</span>
+<span id="cb1-2"><a></a>  <span class="at">repos =</span> repo, </span>
+<span id="cb1-3"><a></a>  <span class="at">val.criterion.repos =</span> repo,</span>
+<span id="cb1-4"><a></a>  <span class="at">available_packages_filters =</span> </span>
+<span id="cb1-5"><a></a>    <span class="fu">package_filter</span>(check_errors <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> <span class="fu">percentile</span>(downloads) <span class="sc">&gt;=</span> <span class="fl">0.25</span>)</span>
+<span id="cb1-6"><a></a>)</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="fu">available.packages</span>()</span>
+<span id="cb1-9"><a></a><span class="co">#&gt; ℹ excluding 3 packages according to package filtering policy</span></span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a><span class="fu">install.package</span>(poor_quality_pkg)</span>
+<span id="cb1-12"><a></a><span class="co">#&gt; Error in `install.packages()`:</span></span>
+<span id="cb1-13"><a></a><span class="co">#&gt; ! required packages are excluded due to package filters</span></span>
+<span id="cb1-14"><a></a><span class="co">#&gt;   "poor_quality_pkg"</span></span>
+<span id="cb1-15"><a></a><span class="co">#&gt; ℹ To explain, use `val.criterion::last_rejected()`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="why-novartis-wants-to-thaw-the-status-quo-james-orla" class="slide level2">
 <h2>Why Novartis wants to thaw the status quo (James &amp; Orla)</h2>
