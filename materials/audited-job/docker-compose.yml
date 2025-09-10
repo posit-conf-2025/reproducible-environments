@@ -1,0 +1,30 @@
+services:
+  workbench:
+    image: posit-wb:${PWB_VERSION:-2025.09.0-379.pro1}-${DIST:-noble}
+    build:
+      context: .
+      dockerfile: Dockerfile.compile
+      args:
+        PWB_VERSION: ${PWB_VERSION:-2025.09.0-379.pro1}
+        R_VERSION_LIST: ${R_VERSION:-4.5.1}
+        PYTHON_VERSION: ${PYTHON_VERSION:-3.11.6}
+        DIST: ${DIST:-noble}
+        DISTNUM: ${DISTNUM:-2404}
+    command: ["rstudio"]
+    container_name: workbench
+    hostname: workbench
+    privileged: true
+    volumes:
+      - var_lib_rstudio_server:/var/lib/rstudio-server
+      - home:/home
+    expose:
+      - "8787"
+    ports:
+      - "8787:8787"
+    environment:
+      RSP_LICENSE: ${RSP_LICENSE}
+
+
+volumes:
+  home:
+  var_lib_rstudio_server:

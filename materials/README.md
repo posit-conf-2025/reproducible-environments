@@ -1,1 +1,3 @@
-Add materials for your workshop in this folder. You can then remove this README, and rename this folder if you prefer.
+This folder contains some supplemental materials in various subfolders
+
+* audited-jobs: A sample Posit Workbench installation with audited jobs enabled. 
