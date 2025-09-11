@@ -35,7 +35,7 @@ Let's say you launch the RStudio IDE. You develop a code there and want to run i
 
 Once the job is run, you can click on the job details
 
-![job details](image.png)
+![audit details link](img/details.png)
 
 after which you get an overview page with the below three tabs
 
