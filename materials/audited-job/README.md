@@ -42,6 +42,7 @@ after which you get an overview page with the below three tabs
 * Digital signature and output 
 * System details
 * R Environment details
+* User defined data (you can store outputs in a protected folder whose location is defined by the `AUDIT_DETAILS_PATH` environment variable)
 
 ![stdout](img/audit1.png)
 ![system details](img/audit2.png)
