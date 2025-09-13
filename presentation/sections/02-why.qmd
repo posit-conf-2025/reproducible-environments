@@ -1,0 +1,55 @@
+# Why This Matters
+
+_Reproducibility as the foundation for trust in Pharma_
+
+# Reproducibility = Trust
+
+- Required by **FDA, EMA, PMDA, GxP**  
+- Repeatable results ⇒ credibility & compliance  
+- Without it ⇒ **risk, rework, delays**
+
+::: notes
+Reproducibility is foundational for audits and long-term credibility.
+:::
+
+## Pharma’s Legacy Struggles
+
+- Monoliths, **manual validation**  
+- “Validation tax”: **bloated, slow pipelines**  
+- Two environments: **exploratory vs validated**
+
+::: notes
+Duplicated effort and inconsistencies when re-running work for submissions.
+:::
+
+## Containers Change Everything
+
+- **Frozen, versioned execution** environments  
+- Consistency across **dev → validation → submission**  
+- Isolate deps (R, Python, SAS); **runs the same everywhere**  
+
+They **enable all of this**, but can feel like a **mystery** — so we’ll **show them in action today**
+
+
+## Beyond Containers
+
+Containers are the backbone, but not the whole story, there's a whole ecosystem around them:
+
+- **Managed package repos** ⇒ governance & trust  
+- **Snapshot versions** ⇒ no surprises in re-runs  
+- **Audited jobs** ⇒ capture runtime metadata  
+- **Infrastructure as Code** ⇒ environments are reproducible end-to-end
+
+::: notes
+While we can't touch everything today, we'll touch on some of those points today
+::: 
+
+## Rafa’s & Appsilon's Perspective
+
+Reproducibility is not only a **regulatory requirement**
+it’s the foundation that lets science move **fast and responsibly**.  
+
+- Reproducibility = **compliance × innovation**  
+- Containers = **scalability + sustainability**  
+- **One backbone**: validated & exploratory zones  
+- **Modular, cloud-native** Scientific Environments
