@@ -26,4 +26,19 @@ A chance to design with your peers.
 
 :::
 
+## Part 1: In the next hour
+
+We will divide into 4 groups;
+
+- Whiteboard a high level architecture
+- You decide whether you map out the entire architecture, or tackle specific ke problems!
+- Be prepared after the coffee break to present for 10 minutes!
+
+## Part 2: Presentations
+
+- Each group has 10 minutes to present with 5 minutes for questions
+- Focus on what you think is most useful to share
+    - That could be going deep into an end to end architecture OR you could share a high level architecture, and focus in on key pain points you've discussed and plans to mitigate them
+- Please make sure to flag any impact or deeper dives you felt were needed, with stakeholders spanning from IT Quality to end-users.
+
 ---
