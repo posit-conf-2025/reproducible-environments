@@ -182,6 +182,20 @@
     "text": "Goal\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
   },
   {
+    "objectID": "index.html#part-1-in-the-next-hour",
+    "href": "index.html#part-1-in-the-next-hour",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Part 1: In the next hour",
+    "text": "Part 1: In the next hour\nWe will divide into 4 groups;\n\nWhiteboard a high level architecture\nYou decide whether you map out the entire architecture, or tackle specific ke problems!\nBe prepared after the coffee break to present for 10 minutes!"
+  },
+  {
+    "objectID": "index.html#part-2-presentations",
+    "href": "index.html#part-2-presentations",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Part 2: Presentations",
+    "text": "Part 2: Presentations\n\nEach group has 10 minutes to present with 5 minutes for questions\nFocus on what you think is most useful to share\n\nThat could be going deep into an end to end architecture OR you could share a high level architecture, and focus in on key pain points you’ve discussed and plans to mitigate them\n\nPlease make sure to flag any impact or deeper dives you felt were needed, with stakeholders spanning from IT Quality to end-users."
+  },
+  {
     "objectID": "sections/05-hands-on.html",
     "href": "sections/05-hands-on.html",
     "title": "Hands on section",
@@ -361,7 +375,7 @@
     "href": "sections/06-small-group.html",
     "title": "Small group session",
     "section": "",
-    "text": "A chance to design with your peers.\n\n\n\nWe want to hear your proposals!\n\n\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+    "text": "A chance to design with your peers.\n\n\n\nWe want to hear your proposals!\n\n\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc\n\n\n\n\n\n\nWe will divide into 4 groups;\n\nWhiteboard a high level architecture\nYou decide whether you map out the entire architecture, or tackle specific ke problems!\nBe prepared after the coffee break to present for 10 minutes!\n\n\n\n\n\nEach group has 10 minutes to present with 5 minutes for questions\nFocus on what you think is most useful to share\n\nThat could be going deep into an end to end architecture OR you could share a high level architecture, and focus in on key pain points you’ve discussed and plans to mitigate them\n\nPlease make sure to flag any impact or deeper dives you felt were needed, with stakeholders spanning from IT Quality to end-users."
   },
   {
     "objectID": "sections/06-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
@@ -376,5 +390,19 @@
     "title": "Small group session",
     "section": "",
     "text": "Deliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+  },
+  {
+    "objectID": "sections/06-small-group.html#part-1-in-the-next-hour",
+    "href": "sections/06-small-group.html#part-1-in-the-next-hour",
+    "title": "Small group session",
+    "section": "",
+    "text": "We will divide into 4 groups;\n\nWhiteboard a high level architecture\nYou decide whether you map out the entire architecture, or tackle specific ke problems!\nBe prepared after the coffee break to present for 10 minutes!"
+  },
+  {
+    "objectID": "sections/06-small-group.html#part-2-presentations",
+    "href": "sections/06-small-group.html#part-2-presentations",
+    "title": "Small group session",
+    "section": "",
+    "text": "Each group has 10 minutes to present with 5 minutes for questions\nFocus on what you think is most useful to share\n\nThat could be going deep into an end to end architecture OR you could share a high level architecture, and focus in on key pain points you’ve discussed and plans to mitigate them\n\nPlease make sure to flag any impact or deeper dives you felt were needed, with stakeholders spanning from IT Quality to end-users."
   }
 ]
