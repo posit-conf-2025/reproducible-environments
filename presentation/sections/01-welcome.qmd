@@ -20,7 +20,7 @@
 :::
 
 ::: {.column width="20%"}
-![](../images/Rafa.jpeg){fig-round=true width="100px"}
+![](/images/Rafa.jpeg){fig-round=true width="100px"}
 
 **Rafael Pereira**  
 :::
