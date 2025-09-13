@@ -1,0 +1,2 @@
+# /etc/rstudio/load-balancer
+balancer=sessions
