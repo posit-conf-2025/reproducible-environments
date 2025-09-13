@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>requirements – posit::conf(2025): Reproducible Environments Workshop</title>
+<title>why – posit::conf(2025): Reproducible Environments Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,9 +67,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -88,96 +85,73 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="what-is-our-aim" class="level1 center">
-<h1 class="center">What is our aim?</h1>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;">
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/ala69u8nw9124vkw937hhufm1245bspv/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
-</iframe>
-</div>
+<section id="why-this-matters" class="level1">
+<h1>Why This Matters</h1>
+<p><em>Reproducibility as the foundation for trust in Pharma</em></p>
 </section>
-<section id="youve-got-to-roll-with-it" class="level2">
-<h2 class="anchored" data-anchor-id="youve-got-to-roll-with-it">You’ve got to roll with it!</h2>
-<p>A summary of experiences at Novartis.</p>
-<p>Orla Doyle (presented by James)</p>
-</section>
-<section id="adopting-new-tools" class="level2">
-<h2 class="anchored" data-anchor-id="adopting-new-tools">Adopting new tools</h2>
+<section id="reproducibility-trust" class="level1">
+<h1>Reproducibility = Trust</h1>
 <ul>
-<li>At Novartis we were testing the {rbmi} package for multiple imputation</li>
-<li>We weren’t able to reproduce our results</li>
-<li>The underlying algorithm is deterministic so this was unexpected</li>
-<li>The magnitude of the difference was enough to change the scientific conclusions</li>
-</ul>
-</section>
-<section id="reproducibility-detective-work" class="level2">
-<h2 class="anchored" data-anchor-id="reproducibility-detective-work">Reproducibility Detective Work</h2>
-<p><strong>Did we set the seed?</strong> <em>Yes!</em><br>
-<strong>Is this related to hardware?</strong> <em>No!</em><br>
-<strong>Is this a problem with a specific OS linear algebra library?</strong> <em>No!</em></p>
-</section>
-<section id="open-source-in-action" class="level2">
-<h2 class="anchored" data-anchor-id="open-source-in-action">Open-source in action</h2>
-<p>Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.</p>
-<div style="font-size: 50%;">
-<ul>
-<li>{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420</li>
-<li>{mmrm} issue: https://github.com/openpharma/mmrm/issues/462</li>
-<li>{TMB} issue: https://github.com/kaskr/adcomp/issues/398</li>
-</ul>
-</div>
-<p><img src="../images/rbmi_deps.png" class="img-fluid"></p>
-</section>
-<section id="collaborated-with-package-maintainers-to-implement-the-fix" class="level2">
-<h2 class="anchored" data-anchor-id="collaborated-with-package-maintainers-to-implement-the-fix">Collaborated with package maintainers to implement the fix</h2>
-<p><img src="../images/timeline.png" class="img-fluid"></p>
-<div class="columns">
-<div class="column" style="width:70%;">
-<ul>
-<li>~3 weeks from issue identification to solution<br>
+<li>Required by <strong>FDA, EMA, PMDA, GxP</strong><br>
 </li>
-<li>Fix deployed at source<br>
+<li>Repeatable results ⇒ credibility &amp; compliance<br>
 </li>
-<li>Highly collaborative and engaged package maintainers - THANK YOU!!<br>
-</li>
+<li>Without it ⇒ <strong>risk, rework, delays</strong></li>
 </ul>
-</div><div class="column" style="width:30%;">
-<p><img src="../logos/roche-logo.png" class="img-fluid" style="width:50.0%"> <br> <img src="../logos/rconis.png" class="img-fluid" style="width:30.0%"> <img src="../logos/openstatsware.svg" class="img-fluid" style="width:30.0%"></p>
+<div class="notes">
+<p>Reproducibility is foundational for audits and long-term credibility.</p>
 </div>
+<section id="pharmas-legacy-struggles" class="level2">
+<h2 class="anchored" data-anchor-id="pharmas-legacy-struggles">Pharma’s Legacy Struggles</h2>
+<ul>
+<li>Monoliths, <strong>manual validation</strong><br>
+</li>
+<li>“Validation tax”: <strong>bloated, slow pipelines</strong><br>
+</li>
+<li>Two environments: <strong>exploratory vs validated</strong></li>
+</ul>
+<div class="notes">
+<p>Duplicated effort and inconsistencies when re-running work for submissions.</p>
 </div>
 </section>
-<section id="deployment-at-novartis" class="level2">
-<h2 class="anchored" data-anchor-id="deployment-at-novartis">Deployment at Novartis</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">timeline
-    title Frozen R environments with ~6 month refresh
-    H123 : R4.1.0 bundle 1
-    H223 : R4.1.0 bundle 2
-    H124 : R4.3.1 bundle 1
-    H224 : R4.3.1 bundle 2
-         : Project-level bundle using an adhoc, GxP install
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="containers-change-everything" class="level2">
+<h2 class="anchored" data-anchor-id="containers-change-everything">Containers Change Everything</h2>
 <ul>
-<li>Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level</li>
-<li>The rolling update is essential so we can use the latest, corrected version of packages</li>
-<li>Implementation of rolling update could be improved using managed tools like ppm</li>
+<li><strong>Frozen, versioned execution</strong> environments<br>
+</li>
+<li>Consistency across <strong>dev → validation → submission</strong><br>
+</li>
+<li>Isolate deps (R, Python, SAS); <strong>runs the same everywhere</strong></li>
 </ul>
+<p>They <strong>enable all of this</strong>, but can feel like a <strong>mystery</strong> — so we’ll <strong>show them in action today</strong></p>
 </section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<section id="beyond-containers" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-containers">Beyond Containers</h2>
+<p>Containers are the backbone, but not the whole story, there’s a whole ecosystem around them:</p>
 <ul>
-<li>The packages we rely on are in a constant state of flux: this is a feature not a bug!</li>
-<li>Our approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions</li>
+<li><strong>Managed package repos</strong> ⇒ governance &amp; trust<br>
+</li>
+<li><strong>Snapshot versions</strong> ⇒ no surprises in re-runs<br>
+</li>
+<li><strong>Audited jobs</strong> ⇒ capture runtime metadata<br>
+</li>
+<li><strong>Infrastructure as Code</strong> ⇒ environments are reproducible end-to-end</li>
+</ul>
+<div class="notes">
+<p>While we can’t touch everything today, we’ll touch on some of those points today</p>
+</div>
+</section>
+<section id="rafas-appsilons-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="rafas-appsilons-perspective">Rafa’s &amp; Appsilon’s Perspective</h2>
+<p>Reproducibility is not only a <strong>regulatory requirement</strong> it’s the foundation that lets science move <strong>fast and responsibly</strong>.</p>
+<ul>
+<li>Reproducibility = <strong>compliance × innovation</strong><br>
+</li>
+<li>Containers = <strong>scalability + sustainability</strong><br>
+</li>
+<li><strong>One backbone</strong>: validated &amp; exploratory zones<br>
+</li>
+<li><strong>Modular, cloud-native</strong> Scientific Environments</li>
 </ul>
 
 

@@ -21,6 +21,34 @@
     "text": "Our aim\n\nExplore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
   },
   {
+    "objectID": "index.html#pharmas-legacy-struggles",
+    "href": "index.html#pharmas-legacy-struggles",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Pharma’s Legacy Struggles",
+    "text": "Pharma’s Legacy Struggles\n\nMonoliths, manual validation\n\n“Validation tax”: bloated, slow pipelines\n\nTwo environments: exploratory vs validated\n\n\nDuplicated effort and inconsistencies when re-running work for submissions."
+  },
+  {
+    "objectID": "index.html#containers-change-everything",
+    "href": "index.html#containers-change-everything",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Containers Change Everything",
+    "text": "Containers Change Everything\n\nFrozen, versioned execution environments\n\nConsistency across dev → validation → submission\n\nIsolate deps (R, Python, SAS); runs the same everywhere\n\nThey enable all of this, but can feel like a mystery — so we’ll show them in action today"
+  },
+  {
+    "objectID": "index.html#beyond-containers",
+    "href": "index.html#beyond-containers",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Beyond Containers",
+    "text": "Beyond Containers\nContainers are the backbone, but not the whole story, there’s a whole ecosystem around them:\n\nManaged package repos ⇒ governance & trust\n\nSnapshot versions ⇒ no surprises in re-runs\n\nAudited jobs ⇒ capture runtime metadata\n\nInfrastructure as Code ⇒ environments are reproducible end-to-end\n\n\nWhile we can’t touch everything today, we’ll touch on some of those points today"
+  },
+  {
+    "objectID": "index.html#rafas-appsilons-perspective",
+    "href": "index.html#rafas-appsilons-perspective",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Rafa’s & Appsilon’s Perspective",
+    "text": "Rafa’s & Appsilon’s Perspective\nReproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
+  },
+  {
     "objectID": "index.html#youve-got-to-roll-with-it",
     "href": "index.html#youve-got-to-roll-with-it",
     "title": "Deploying reproducible analytics environments for regulated use cases",
@@ -154,81 +182,151 @@
     "text": "Goal\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
   },
   {
-    "objectID": "sections/02-requirements.html",
-    "href": "sections/02-requirements.html",
-    "title": "What is our aim?",
+    "objectID": "sections/05-hands-on.html",
+    "href": "sections/05-hands-on.html",
+    "title": "Hands on section",
     "section": "",
-    "text": "A summary of experiences at Novartis.\nOrla Doyle (presented by James)\n\n\n\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
   },
   {
-    "objectID": "sections/02-requirements.html#youve-got-to-roll-with-it",
-    "href": "sections/02-requirements.html#youve-got-to-roll-with-it",
-    "title": "What is our aim?",
+    "objectID": "sections/05-hands-on.html#aims-for-this-session",
+    "href": "sections/05-hands-on.html#aims-for-this-session",
+    "title": "Hands on section",
+    "section": "",
+    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
+  },
+  {
+    "objectID": "sections/03-requirements.html",
+    "href": "sections/03-requirements.html",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
     "section": "",
     "text": "A summary of experiences at Novartis.\nOrla Doyle (presented by James)"
   },
   {
-    "objectID": "sections/02-requirements.html#adopting-new-tools",
-    "href": "sections/02-requirements.html#adopting-new-tools",
-    "title": "What is our aim?",
+    "objectID": "sections/03-requirements.html#youve-got-to-roll-with-it",
+    "href": "sections/03-requirements.html#youve-got-to-roll-with-it",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
     "section": "",
-    "text": "At Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+    "text": "A summary of experiences at Novartis.\nOrla Doyle (presented by James)"
   },
   {
-    "objectID": "sections/02-requirements.html#reproducibility-detective-work",
-    "href": "sections/02-requirements.html#reproducibility-detective-work",
-    "title": "What is our aim?",
-    "section": "",
-    "text": "Did we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
+    "objectID": "sections/03-requirements.html#adopting-new-tools",
+    "href": "sections/03-requirements.html#adopting-new-tools",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Adopting new tools",
+    "text": "Adopting new tools\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
   },
   {
-    "objectID": "sections/02-requirements.html#open-source-in-action",
-    "href": "sections/02-requirements.html#open-source-in-action",
-    "title": "What is our aim?",
-    "section": "",
-    "text": "Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
+    "objectID": "sections/03-requirements.html#reproducibility-detective-work",
+    "href": "sections/03-requirements.html#reproducibility-detective-work",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Reproducibility Detective Work",
+    "text": "Reproducibility Detective Work\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
   },
   {
-    "objectID": "sections/02-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
-    "href": "sections/02-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
-    "title": "What is our aim?",
-    "section": "",
-    "text": "~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
+    "objectID": "sections/03-requirements.html#open-source-in-action",
+    "href": "sections/03-requirements.html#open-source-in-action",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Open-source in action",
+    "text": "Open-source in action\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
   },
   {
-    "objectID": "sections/02-requirements.html#deployment-at-novartis",
-    "href": "sections/02-requirements.html#deployment-at-novartis",
-    "title": "What is our aim?",
-    "section": "",
-    "text": "timeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+    "objectID": "sections/03-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "href": "sections/03-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Collaborated with package maintainers to implement the fix",
+    "text": "Collaborated with package maintainers to implement the fix\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
   },
   {
-    "objectID": "sections/02-requirements.html#conclusions",
-    "href": "sections/02-requirements.html#conclusions",
-    "title": "What is our aim?",
-    "section": "",
-    "text": "The packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+    "objectID": "sections/03-requirements.html#deployment-at-novartis",
+    "href": "sections/03-requirements.html#deployment-at-novartis",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Deployment at Novartis",
+    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
   },
   {
-    "objectID": "sections/05-small-group.html",
-    "href": "sections/05-small-group.html",
-    "title": "Small group session",
-    "section": "",
-    "text": "A chance to design with your peers.\n\n\n\nWe want to hear your proposals!\n\n\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+    "objectID": "sections/03-requirements.html#conclusions",
+    "href": "sections/03-requirements.html#conclusions",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Conclusions",
+    "text": "Conclusions\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
-    "objectID": "sections/05-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
-    "href": "sections/05-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
-    "title": "Small group session",
+    "objectID": "sections/02-why.html",
+    "href": "sections/02-why.html",
+    "title": "Why This Matters",
     "section": "",
-    "text": "We want to hear your proposals!"
+    "text": "Reproducibility as the foundation for trust in Pharma"
   },
   {
-    "objectID": "sections/05-small-group.html#goal",
-    "href": "sections/05-small-group.html#goal",
-    "title": "Small group session",
+    "objectID": "sections/02-why.html#pharmas-legacy-struggles",
+    "href": "sections/02-why.html#pharmas-legacy-struggles",
+    "title": "Why This Matters",
+    "section": "Pharma’s Legacy Struggles",
+    "text": "Pharma’s Legacy Struggles\n\nMonoliths, manual validation\n\n“Validation tax”: bloated, slow pipelines\n\nTwo environments: exploratory vs validated\n\n\nDuplicated effort and inconsistencies when re-running work for submissions."
+  },
+  {
+    "objectID": "sections/02-why.html#containers-change-everything",
+    "href": "sections/02-why.html#containers-change-everything",
+    "title": "Why This Matters",
+    "section": "Containers Change Everything",
+    "text": "Containers Change Everything\n\nFrozen, versioned execution environments\n\nConsistency across dev → validation → submission\n\nIsolate deps (R, Python, SAS); runs the same everywhere\n\nThey enable all of this, but can feel like a mystery — so we’ll show them in action today"
+  },
+  {
+    "objectID": "sections/02-why.html#beyond-containers",
+    "href": "sections/02-why.html#beyond-containers",
+    "title": "Why This Matters",
+    "section": "Beyond Containers",
+    "text": "Beyond Containers\nContainers are the backbone, but not the whole story, there’s a whole ecosystem around them:\n\nManaged package repos ⇒ governance & trust\n\nSnapshot versions ⇒ no surprises in re-runs\n\nAudited jobs ⇒ capture runtime metadata\n\nInfrastructure as Code ⇒ environments are reproducible end-to-end\n\n\nWhile we can’t touch everything today, we’ll touch on some of those points today"
+  },
+  {
+    "objectID": "sections/02-why.html#rafas-appsilons-perspective",
+    "href": "sections/02-why.html#rafas-appsilons-perspective",
+    "title": "Why This Matters",
+    "section": "Rafa’s & Appsilon’s Perspective",
+    "text": "Rafa’s & Appsilon’s Perspective\nReproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
+  },
+  {
+    "objectID": "sections/04-perspectives.html",
+    "href": "sections/04-perspectives.html",
+    "title": "Industry perspectives",
     "section": "",
-    "text": "Deliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
+    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists.\n\n\n\n\n\n\n\n\nspeaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting\n\n\n\n\n\n\n\n\n\n\n\n\nStarted here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app\n\n\n\n\n\n\n\n\n\nRVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noptions(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
+  },
+  {
+    "objectID": "sections/04-perspectives.html#sustainable-software-at-roche",
+    "href": "sections/04-perspectives.html#sustainable-software-at-roche",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists."
+  },
+  {
+    "objectID": "sections/04-perspectives.html#automating-the-busy-work",
+    "href": "sections/04-perspectives.html#automating-the-busy-work",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "speaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting"
+  },
+  {
+    "objectID": "sections/04-perspectives.html#the-r-validation-hub",
+    "href": "sections/04-perspectives.html#the-r-validation-hub",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "Started here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app"
+  },
+  {
+    "objectID": "sections/04-perspectives.html#the-r-validation-hub-1",
+    "href": "sections/04-perspectives.html#the-r-validation-hub-1",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "RVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository"
+  },
+  {
+    "objectID": "sections/04-perspectives.html#the-r-validation-hub-3",
+    "href": "sections/04-perspectives.html#the-r-validation-hub-3",
+    "title": "Industry perspectives",
+    "section": "",
+    "text": "options(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
   },
   {
     "objectID": "sections/01-welcome.html",
@@ -259,59 +357,24 @@
     "text": "Explore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
   },
   {
-    "objectID": "sections/04-hands-on.html",
-    "href": "sections/04-hands-on.html",
-    "title": "Hands on section",
+    "objectID": "sections/06-small-group.html",
+    "href": "sections/06-small-group.html",
+    "title": "Small group session",
     "section": "",
-    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
+    "text": "A chance to design with your peers.\n\n\n\nWe want to hear your proposals!\n\n\n\n\n\n\nDeliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
   },
   {
-    "objectID": "sections/04-hands-on.html#aims-for-this-session",
-    "href": "sections/04-hands-on.html#aims-for-this-session",
-    "title": "Hands on section",
+    "objectID": "sections/06-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
+    "href": "sections/06-small-group.html#there-is-no-industry-standard-for-deliverying-environments",
+    "title": "Small group session",
     "section": "",
-    "text": "Explore considerations when designing an R computing environment\nUnderstand trade-offs with each design choice, often trading flexibility, reproducibility and complexity.\nSee and test a few examples of setups along the way."
+    "text": "We want to hear your proposals!"
   },
   {
-    "objectID": "sections/03-perspectives.html",
-    "href": "sections/03-perspectives.html",
-    "title": "Industry perspectives",
+    "objectID": "sections/06-small-group.html#goal",
+    "href": "sections/06-small-group.html#goal",
+    "title": "Small group session",
     "section": "",
-    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists.\n\n\n\n\n\n\n\n\nspeaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting\n\n\n\n\n\n\n\n\n\n\n\n\nStarted here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app\n\n\n\n\n\n\n\n\n\nRVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noptions(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
-  },
-  {
-    "objectID": "sections/03-perspectives.html#sustainable-software-at-roche",
-    "href": "sections/03-perspectives.html#sustainable-software-at-roche",
-    "title": "Industry perspectives",
-    "section": "",
-    "text": "Balancing rigor with effective data science\nSoftware quality is a risk, but so are outdated software and reluctant data scientists."
-  },
-  {
-    "objectID": "sections/03-perspectives.html#automating-the-busy-work",
-    "href": "sections/03-perspectives.html#automating-the-busy-work",
-    "title": "Industry perspectives",
-    "section": "",
-    "text": "speaker: Doug * automated quality checks: high bar for documentation & code coverage * manual review: community adoption, author reputation, test quality\n\nBeing rigorous is a lot of work, but most of it can be automated\n\n\n\n\n\n\n\nReport produced as CI artifact\nPackage published to internal Posit Package Manager\n\n\n\n\n\nPackage requires manual review\nSupport team R experts review package, either\n✅ justifying gaps\n❌ or rejecting"
-  },
-  {
-    "objectID": "sections/03-perspectives.html#the-r-validation-hub",
-    "href": "sections/03-perspectives.html#the-r-validation-hub",
-    "title": "Industry perspectives",
-    "section": "",
-    "text": "Started here! R/Pharma 2018\nOperating under the R Consortium\nDelivered a white paper that outlines what R validation could look like.\nLaunched {riskmetric}, {riskassessment} shiny app"
-  },
-  {
-    "objectID": "sections/03-perspectives.html#the-r-validation-hub-1",
-    "href": "sections/03-perspectives.html#the-r-validation-hub-1",
-    "title": "Industry perspectives",
-    "section": "",
-    "text": "RVH tools re-imagined:\n{val.meter}, {val.report}, {val.repo}\nBuilding a public metric repository"
-  },
-  {
-    "objectID": "sections/03-perspectives.html#the-r-validation-hub-3",
-    "href": "sections/03-perspectives.html#the-r-validation-hub-3",
-    "title": "Industry perspectives",
-    "section": "",
-    "text": "options(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
+    "text": "Deliverable 1:\n\nWho are the key stakeholders to a regulated R environment?\nAre you aiming to solve specific pain points?\n\n\nDeliverable 2:\n\nWhiteboard a proposed architecture to test and provision ‘post risk review’ packages\nHighlight key experiences. E.g. updating packages, new packages, internal vs CRAN, etc, adding or updating unix level dependencies, etc"
   }
 ]
