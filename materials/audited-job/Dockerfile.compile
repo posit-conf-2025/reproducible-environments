@@ -1,0 +1,85 @@
+ARG DIST="noble"
+ARG DISTNUM="2404"
+
+FROM ubuntu:${DIST}
+
+ARG PWB_VERSION
+ARG PROXY
+ARG DIST="noble"
+ARG DISTNUM="2404"
+
+# Install and configure R and RStudio Workbench
+
+COPY config/rstudio/create.R /tmp/create.R 
+
+ARG R_VERSION_LIST
+RUN for R_VERSION in ${R_VERSION_LIST}; do apt-get update -y && \
+	apt-get install -y gdebi-core curl wget && \ 
+	echo "Downloading R $R_VERSION" && \ 
+        echo https://cdn.posit.co/r/ubuntu-${DISTNUM}/pkgs/r-${R_VERSION}_1_$(dpkg --print-architecture).deb && \
+	curl -LO https://cdn.posit.co/r/ubuntu-${DISTNUM}/pkgs/r-${R_VERSION}_1_$(dpkg --print-architecture).deb && \
+	echo "Installing R $R_VERSION" && \
+	gdebi -n r-${R_VERSION}_1_amd64.deb && \
+	rm -f r-${R_VERSION}_1_amd64.deb && \
+	/opt/R/$R_VERSION/bin/Rscript /tmp/create.R ; done && \
+	apt clean all && \
+    rm -rf /var/cache/apt
+
+
+RUN if [ "${DIST}" = "noble" ]; then export DIST="jammy"; fi  && \
+	apt-get update -y && groupadd  -g 999 rstudio-server && \ 
+   	useradd -g 999 -m -u 999 -s /bin/bash rstudio-server && \
+    echo https://s3.amazonaws.com/rstudio-ide-build/server/${DIST}/amd64/rstudio-workbench-${PWB_VERSION}-amd64.deb && \
+    curl -LO https://s3.amazonaws.com/rstudio-ide-build/server/${DIST}/amd64/rstudio-workbench-${PWB_VERSION}-amd64.deb && \
+	gdebi -n rstudio-workbench-${PWB_VERSION}-amd64.deb && \
+	rm -f rstudio-workbench-${PWB_VERSION}-amd64.deb && \
+    	apt clean all && \
+    	rm -rf /var/cache/apt
+
+
+## Add VSCode and Jupyter/Python 
+
+### Install Python  -------------------------------------------------------------#
+
+ARG PYTHON_VERSION
+RUN curl -O https://cdn.rstudio.com/python/ubuntu-${DISTNUM}/pkgs/python-${PYTHON_VERSION}_1_amd64.deb && \
+    apt-get update && gdebi -n python-${PYTHON_VERSION}_1_amd64.deb && apt clean all && \
+    rm -rf /var/cache/apt && rm -f python-${PYTHON_VERSION}_1_amd64.deb
+
+RUN /opt/python/${PYTHON_VERSION}/bin/pip install --upgrade pip 
+
+RUN /opt/python/${PYTHON_VERSION}/bin/pip install \
+    jupyter \
+    jupyterlab \
+    workbench_jupyterlab \
+    rsp_jupyter \
+    rsconnect_jupyter \
+    rsconnect_python 
+
+RUN /opt/python/${PYTHON_VERSION}/bin/jupyter-nbextension install --sys-prefix --py rsp_jupyter && \
+    /opt/python/${PYTHON_VERSION}/bin/jupyter-nbextension enable --sys-prefix --py rsp_jupyter && \
+    /opt/python/${PYTHON_VERSION}/bin/jupyter-nbextension install --sys-prefix --py rsconnect_jupyter && \
+    /opt/python/${PYTHON_VERSION}/bin/jupyter-nbextension enable --sys-prefix --py rsconnect_jupyter && \
+    /opt/python/${PYTHON_VERSION}/bin/jupyter-serverextension enable --sys-prefix --py rsconnect_jupyter
+ 
+
+COPY config/rstudio/jupyter.conf /etc/rstudio/jupyter.conf
+
+RUN ln -s /opt/python/${PYTHON_VERSION}/bin/jupyter /usr/local/bin
+
+## Add test user rstudio
+
+RUN groupadd rstudio -g 2048 \
+        && useradd -m rstudio -s /bin/bash -u 2048 -g 2048\
+        && bash -c "echo -e \"rstudio\\nrstudio\" | passwd rstudio"
+
+## SSSD 
+
+COPY config/rstudio/rserver.conf /etc/rstudio/rserver.conf
+
+RUN mkdir -p /opt/rstudio/scripts
+
+COPY scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+
