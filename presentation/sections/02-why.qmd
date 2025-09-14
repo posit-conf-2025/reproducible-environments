@@ -2,7 +2,7 @@
 
 _Reproducibility as the foundation for trust in Pharma_
 
-# Reproducibility = Trust
+## Reproducibility = Trust
 
 - Required by **FDA, EMA, PMDA, GxP**  
 - Repeatable results ⇒ credibility & compliance  

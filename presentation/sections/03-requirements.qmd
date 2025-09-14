@@ -1,8 +1,8 @@
-## You've got to roll with it!
+# You've got to roll with it!
 
 A summary of experiences at Novartis.
 
-Orla Doyle (presented by James)
+Orla Doyle & James Black
 
 ## Adopting new tools 
 
@@ -68,9 +68,25 @@ timeline
          : Project-level bundle using an adhoc, GxP install
 ```
 
-## Our new approach - thawing frozen environments
+## Thawing frozen environments
 
+:::: {.columns}
 
+::: {.column .r-fit-text width="25%"}
+**Legacy**
+
+R package validation is coupled to the container
+
+**Modern**
+
+R package validation is de-coupled from the container, and many R package cohorts validated against a single container.
+:::
+
+::: {.column width="70%"}
+![](images/frozenVrolling.gif){ .dropshadow .padded }
+:::
+
+::::
 
 ## Conclusions
 
