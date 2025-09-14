@@ -380,7 +380,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <section id="adopting-new-tools" class="slide level2">
 <h2>Adopting new tools</h2>
 <ul>
-<li>At Novartis we were testing the {rbmi} package for multiple imputation</li>
+<li>At Novartis we needed the {rbmi} package for multiple imputation</li>
 <li>We weren’t able to reproduce our results</li>
 <li>The underlying algorithm is deterministic so this was unexpected</li>
 <li>The magnitude of the difference was enough to change the scientific conclusions</li>
@@ -403,10 +403,10 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 </ul>
 </div>
 
-<img data-src="../images/rbmi_deps.png" class="r-stretch"></section>
+<img data-src="./images/rbmi_deps.png" class="r-stretch"></section>
 <section id="collaborated-with-package-maintainers-to-implement-the-fix" class="slide level2">
 <h2>Collaborated with package maintainers to implement the fix</h2>
-<p><img data-src="../images/timeline.png"></p>
+<p><img data-src="./images/timeline.png"></p>
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
@@ -418,7 +418,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 </li>
 </ul>
 </div><div class="column" style="width:30%;">
-<p><img data-src="../logos/roche-logo.png" style="width:50.0%"> <br> <img data-src="../logos/rconis.png" style="width:30.0%"> <img data-src="../logos/openstatsware.svg" style="width:30.0%"></p>
+<p><img data-src="./logos/roche-logo.png" style="width:50.0%"> <br> <img data-src="./logos/rconis.png" style="width:30.0%"> <img data-src="./logos/openstatsware.svg" style="width:30.0%"></p>
 </div></div>
 </section>
 <section id="deployment-at-novartis" class="slide level2">
@@ -429,7 +429,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">timeline
-    title Frozen R environments with ~6 month refresh
+    title Novartis Legacy Approch -  R environments with ~6 month refresh
     H123 : R4.1.0 bundle 1
     H223 : R4.1.0 bundle 2
     H124 : R4.3.1 bundle 1
@@ -441,11 +441,9 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 </div>
 </div>
 </div>
-<ul>
-<li>Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level</li>
-<li>The rolling update is essential so we can use the latest, corrected version of packages</li>
-<li>Implementation of rolling update could be improved using managed tools like ppm</li>
-</ul>
+</section>
+<section id="our-new-approach---thawing-frozen-environments" class="slide level2">
+<h2>Our new approach - thawing frozen environments</h2>
 </section>
 <section id="conclusions" class="slide level2">
 <h2>Conclusions</h2>
@@ -576,12 +574,6 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <span id="cb1-14"><a></a><span class="co">#&gt;   "poor_quality_pkg"</span></span>
 <span id="cb1-15"><a></a><span class="co">#&gt; ℹ To explain, use `val.criterion::last_rejected()`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section>
-<section id="why-novartis-wants-to-thaw-the-status-quo-james-orla" class="slide level2">
-<h2>Why Novartis wants to thaw the status quo (James &amp; Orla)</h2>
-</section>
-<section id="section-1" class="slide level2">
-<h2>?</h2>
 </section></section>
 <section>
 <section id="hands-on-section" class="title-slide slide level1 center">

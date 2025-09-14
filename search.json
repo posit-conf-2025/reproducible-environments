@@ -60,7 +60,7 @@
     "href": "index.html#adopting-new-tools",
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Adopting new tools",
-    "text": "Adopting new tools\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+    "text": "Adopting new tools\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
   },
   {
     "objectID": "index.html#reproducibility-detective-work",
@@ -88,7 +88,14 @@
     "href": "index.html#deployment-at-novartis",
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Deployment at Novartis",
-    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
+  },
+  {
+    "objectID": "index.html#our-new-approach---thawing-frozen-environments",
+    "href": "index.html#our-new-approach---thawing-frozen-environments",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Our new approach - thawing frozen environments",
+    "text": "Our new approach - thawing frozen environments"
   },
   {
     "objectID": "index.html#conclusions",
@@ -138,20 +145,6 @@
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "The R Validation Hub",
     "text": "The R Validation Hub\nBuilding consensus\n\n\noptions(\n  repos = repo, \n  val.criterion.repos = repo,\n  available_packages_filters = \n    package_filter(check_errors == 0 & percentile(downloads) &gt;= 0.25)\n)\n\navailable.packages()\n#&gt; ℹ excluding 3 packages according to package filtering policy\n\ninstall.package(poor_quality_pkg)\n#&gt; Error in `install.packages()`:\n#&gt; ! required packages are excluded due to package filters\n#&gt;   \"poor_quality_pkg\"\n#&gt; ℹ To explain, use `val.criterion::last_rejected()`"
-  },
-  {
-    "objectID": "index.html#why-novartis-wants-to-thaw-the-status-quo-james-orla",
-    "href": "index.html#why-novartis-wants-to-thaw-the-status-quo-james-orla",
-    "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "Why Novartis wants to thaw the status quo (James & Orla)",
-    "text": "Why Novartis wants to thaw the status quo (James & Orla)"
-  },
-  {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
-    "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "?",
-    "text": "?"
   },
   {
     "objectID": "index.html#aims-for-this-session",
@@ -228,7 +221,7 @@
     "href": "sections/03-requirements.html#adopting-new-tools",
     "title": "posit::conf(2025): Reproducible Environments Workshop",
     "section": "Adopting new tools",
-    "text": "Adopting new tools\n\nAt Novartis we were testing the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+    "text": "Adopting new tools\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
   },
   {
     "objectID": "sections/03-requirements.html#reproducibility-detective-work",
@@ -256,7 +249,14 @@
     "href": "sections/03-requirements.html#deployment-at-novartis",
     "title": "posit::conf(2025): Reproducible Environments Workshop",
     "section": "Deployment at Novartis",
-    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Frozen R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\nCurrent package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level\nThe rolling update is essential so we can use the latest, corrected version of packages\nImplementation of rolling update could be improved using managed tools like ppm"
+    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
+  },
+  {
+    "objectID": "sections/03-requirements.html#our-new-approach---thawing-frozen-environments",
+    "href": "sections/03-requirements.html#our-new-approach---thawing-frozen-environments",
+    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "section": "Our new approach - thawing frozen environments",
+    "text": "Our new approach - thawing frozen environments"
   },
   {
     "objectID": "sections/03-requirements.html#conclusions",
