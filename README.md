@@ -12,18 +12,6 @@ Deploying reproducible analytics environments for regulated use cases
 
 -----
 
-- [ ] Check lunch and coffee break times (James)
-- [ ] Who is attending right now (Doug)
-- [x] Main technical session content first proposal. New sys dependencies. Auditable jobs (Doug). [Added to gdoc](https://docs.google.com/document/d/1SKsN6N2ubydlNmyxYkK5qWTZnxK0lPgU8orSdDZ6MzM/edit?tab=t.0).
-    - [ ] Net yet validated package
-    - [ ] In-house package
-    - [ ] CRAN vs Github version
-    - [ ] Environment lifecycle for a study (freeze or upgrade R versions)
-- [x] Propose <30 min frozen vs rolling experience changing packages (James)
-- [ ] Leverage Orla's real world example to connect to our abstract hands-on example
-- [ ] Ensure we have access to Posit Workbench (Michael)
-- [ ] Weekly meetings setup (James) - aim for Wednesday
-
 ## Description
 
 The deployment of reproducible analytical environments is a critical topic in the regulated industries, especially for meeting regulatory requirements and ensuring reproducibility in research. This workshop aims to explore the multifaceted challenges and opportunities associated with provisioning and deploying R-based environments, drawing from experiences of deploying enterprise-scale analytical environments for regulatory filings.
