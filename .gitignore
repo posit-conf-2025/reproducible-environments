@@ -16,3 +16,5 @@ renv/activate.R
 **/*_files
 **/_freeze
 **/_site
+.DS_Store
+presentation/.DS_Store
