@@ -6,7 +6,7 @@ Orla Doyle (presented by James)
 
 ## Adopting new tools 
 
-- At Novartis we were testing the {rbmi} package for multiple imputation
+- At Novartis we needed the {rbmi} package for multiple imputation
 - We weren't able to reproduce our results 
 - The underlying algorithm is deterministic so this was unexpected
 - The magnitude of the difference was enough to change the scientific conclusions
@@ -31,11 +31,11 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 - {TMB} issue: https://github.com/kaskr/adcomp/issues/398 
 :::
 
-![](../images/rbmi_deps.png)
+![](/images/rbmi_deps.png)
 
 ## Collaborated with package maintainers to implement the fix
 
-![](../images/timeline.png)
+![](/images/timeline.png)
 
 
 :::: {.columns}
@@ -47,10 +47,10 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 :::
 
 ::: {.column width="30%"}
-![](../logos/roche-logo.png){width=50%}
+![](/logos/roche-logo.png){width=50%}
 <br>
-![](../logos/rconis.png){width=30%}
-![](../logos/openstatsware.svg){width=30%}
+![](/logos/rconis.png){width=30%}
+![](/logos/openstatsware.svg){width=30%}
 :::
 
 :::
@@ -60,7 +60,7 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 ```{mermaid}
 %%| echo: false
 timeline
-    title Frozen R environments with ~6 month refresh
+    title Novartis Legacy Approch -  R environments with ~6 month refresh
     H123 : R4.1.0 bundle 1
     H223 : R4.1.0 bundle 2
     H124 : R4.3.1 bundle 1
@@ -68,9 +68,9 @@ timeline
          : Project-level bundle using an adhoc, GxP install
 ```
 
-- Current package management is a hybrid approach: frozen-model with the option to perform a rolling update at the study-level
-- The rolling update is essential so we can use the latest, corrected version of packages
-- Implementation of rolling update could be improved using managed tools like ppm
+## Our new approach - thawing frozen environments
+
+
 
 ## Conclusions
 

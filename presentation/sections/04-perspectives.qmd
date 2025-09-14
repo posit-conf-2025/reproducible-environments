@@ -124,6 +124,3 @@ install.package(poor_quality_pkg)
 #> ℹ To explain, use `val.criterion::last_rejected()`
 ```
 
-## Why Novartis wants to thaw the status quo (James & Orla)
-
-## ?
