@@ -52,18 +52,15 @@ Absolutely not! But maybe they come _close enough_. Given a relatively simple
 `Containerfile`, let's check our assumptions:
 
 ```{.dockerfile}
-FROM rocker/verse                                                       # <1>
-
-RUN apt-get update && apt-get install -y curl                           # <2>
-
-RUN R -e 'install.packages("tidyverse")'                                # <3>
-COPY analysis.R $HOME/analysis.R                                        # <4>
-
+FROM rocker/r-ver                                            # <1>
+RUN apt-get update && apt-get install -y curl                # <2>
+RUN R -e 'install.packages("dplyr")'                         # <3>
+COPY analysis.R $HOME/analysis.R                             # <4>
 CMD ["Rscript", "analysis.R"]
 ```
 
-1. `rocker/verse` might be interpretted differently depending on your container
-   runtime. `docker` will expand this to `https://docker.io/rocker/verse:latest`,
+1. `rocker/r-ver` might be interpretted differently depending on your container
+   runtime. `docker` will expand this to `https://docker.io/rocker/r-ver:latest`,
    but the fully-qualified path is _inferred_.  
    Similarly, the assumed tag, `latest` is a floating tag. The image may change
    the next time the container is built.

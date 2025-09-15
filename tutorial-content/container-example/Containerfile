@@ -1,0 +1,9 @@
+FROM rocker/r-ver
+
+RUN apt-get update && apt-get install -y curl
+
+RUN R -e 'install.packages("dplyr")'
+
+COPY analysis.R $HOME/analysis.R
+
+CMD ["Rscript", "analysis.R"]
