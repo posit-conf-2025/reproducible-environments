@@ -191,9 +191,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -225,7 +222,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <p><img data-src="https://avatars.githubusercontent.com/u/18220321?v=4.png" data-fig-round="true" width="100"></p>
 <p><strong>Doug Kelkhoff</strong></p>
 </div><div class="column" style="width:20%;">
-<p><img data-src="https://avatars.githubusercontent.com/u/2760096?v=4.png" data-fig-round="true" width="100"></p>
+<p><img data-src="./images/michael.jpeg" data-fig-round="true" width="100"></p>
 <p><strong>Michael Mayer</strong></p>
 </div><div class="column" style="width:20%;">
 <p><img data-src="./images/Rafa.jpeg" data-fig-round="true" width="100"></p>
@@ -373,7 +370,7 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <section id="adopting-new-tools" class="slide level2">
 <h2>Adopting new tools</h2>
 <ul>
-<li>At Novartis we needed the {rbmi} package for multiple imputation</li>
+<li>At Novartis we needed the {<code>rbmi</code>} package for multiple imputation</li>
 <li>We weren’t able to reproduce our results</li>
 <li>The underlying algorithm is deterministic so this was unexpected</li>
 <li>The magnitude of the difference was enough to change the scientific conclusions</li>
@@ -390,9 +387,9 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <p>Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.</p>
 <div style="font-size: 50%;">
 <ul>
-<li>{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420</li>
-<li>{mmrm} issue: https://github.com/openpharma/mmrm/issues/462</li>
-<li>{TMB} issue: https://github.com/kaskr/adcomp/issues/398</li>
+<li>{<code>rbmi</code>} issue: https://github.com/insightsengineering/rbmi/issues/420</li>
+<li>{<code>mmrm</code>} issue: https://github.com/openpharma/mmrm/issues/462</li>
+<li>{<code>TMB</code>} issue: https://github.com/kaskr/adcomp/issues/398</li>
 </ul>
 </div>
 
@@ -414,34 +411,13 @@ James Black &amp; Orla Doyle <img data-src="logos/novartis-logo.webp" style="ver
 <p><img data-src="./logos/roche-logo.png" style="width:50.0%"> <br> <img data-src="./logos/rconis.png" style="width:30.0%"> <img data-src="./logos/openstatsware.svg" style="width:30.0%"></p>
 </div></div>
 </section>
-<section id="deployment-at-novartis" class="slide level2">
-<h2>Deployment at Novartis</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">timeline
-    title Novartis Legacy Approch -  R environments with ~6 month refresh
-    H123 : R4.1.0 bundle 1
-    H223 : R4.1.0 bundle 2
-    H124 : R4.3.1 bundle 1
-    H224 : R4.3.1 bundle 2
-         : Project-level bundle using an adhoc, GxP install
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
 <section id="thawing-frozen-environments" class="slide level2">
 <h2>Thawing frozen environments</h2>
 <div class="columns">
 <div class="column r-fit-text" style="width:25%;">
 <p><strong>Legacy</strong></p>
 <p>R package validation is coupled to the container</p>
-<p><strong>Modern</strong></p>
+<p><strong>New SCE</strong></p>
 <p>R package validation is de-coupled from the container, and many R package cohorts validated against a single container.</p>
 </div><div class="column" style="width:70%;">
 <p><img data-src="images/frozenVrolling.gif" class="dropshadow padded"></p>

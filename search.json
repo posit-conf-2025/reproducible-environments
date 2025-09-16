@@ -84,18 +84,11 @@
     "text": "Collaborated with package maintainers to implement the fix\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
   },
   {
-    "objectID": "index.html#deployment-at-novartis",
-    "href": "index.html#deployment-at-novartis",
-    "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "Deployment at Novartis",
-    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
-  },
-  {
     "objectID": "index.html#thawing-frozen-environments",
     "href": "index.html#thawing-frozen-environments",
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Thawing frozen environments",
-    "text": "Thawing frozen environments\n\n\nLegacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
+    "text": "Thawing frozen environments\n\n\nLegacy\nR package validation is coupled to the container\nNew SCE\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
   },
   {
     "objectID": "index.html#conclusions",
@@ -207,7 +200,7 @@
     "href": "sections/03-requirements.html",
     "title": "You’ve got to roll with it!",
     "section": "",
-    "text": "A summary of experiences at Novartis.\nOrla Doyle & James Black\n\n\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\n\n\n\nLegacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container.\n\n\n\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+    "text": "A summary of experiences at Novartis.\nOrla Doyle & James Black\n\n\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\nLegacy\nR package validation is coupled to the container\nNew SCE\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container.\n\n\n\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "sections/03-requirements.html#adopting-new-tools",
@@ -238,18 +231,11 @@
     "text": "~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
   },
   {
-    "objectID": "sections/03-requirements.html#deployment-at-novartis",
-    "href": "sections/03-requirements.html#deployment-at-novartis",
-    "title": "You’ve got to roll with it!",
-    "section": "",
-    "text": "timeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
-  },
-  {
     "objectID": "sections/03-requirements.html#thawing-frozen-environments",
     "href": "sections/03-requirements.html#thawing-frozen-environments",
     "title": "You’ve got to roll with it!",
     "section": "",
-    "text": "Legacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
+    "text": "Legacy\nR package validation is coupled to the container\nNew SCE\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
   },
   {
     "objectID": "sections/03-requirements.html#conclusions",
