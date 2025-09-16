@@ -151,8 +151,13 @@ if (!require("admiral", quietly = TRUE)) {
 # Install admiral from PPM into the new renv library
 install.packages("admiral")
 
-# Snapshot the current state
-renv::snapshot()
+if (!require("admiral", quietly = TRUE)) {
+  print("Package 'admiral' is not available")
+} else {
+  print(paste("admiral version:", packageVersion("admiral")))
+}
+
+renv::update()
 ```
 
 3. **Use the new function**:
