@@ -14,7 +14,7 @@
 :::
 
 ::: {.column width="20%"}
-![](https://avatars.githubusercontent.com/u/2760096?v=4){fig-round=true width="100px"}
+![](/images/michael.jpeg){fig-round=true width="100px"}
 
 **Michael Mayer**  
 :::
