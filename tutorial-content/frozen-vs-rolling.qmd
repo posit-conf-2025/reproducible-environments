@@ -131,8 +131,8 @@ What if instead of 'baking' the validated packages into the core container that 
 This is currently a 'frozen' environment - so all packages are pre-installed. Let's turn it into a 'rolling environment' where the default PPM snapshot is from a time when `admiral` was at 1.1.1.
 
 ```{r eval=FALSE}
-# Change repository to PPM snapshot from December 10, 2024
-options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2024-12-10"))
+# Change repository to PPM snapshot from 2025
+options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2025-04-20"))
 
 # Initialize renv for your project
 renv::init()
