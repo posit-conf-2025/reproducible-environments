@@ -156,8 +156,6 @@ if (!require("admiral", quietly = TRUE)) {
 } else {
   print(paste("admiral version:", packageVersion("admiral")))
 }
-
-renv::update()
 ```
 
 3. **Use the new function**:
