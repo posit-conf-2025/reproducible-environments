@@ -6,7 +6,7 @@ Orla Doyle & James Black
 
 ## Adopting new tools 
 
-- At Novartis we needed the {rbmi} package for multiple imputation
+- At Novartis we needed the {`rbmi`} package for multiple imputation
 - We weren't able to reproduce our results 
 - The underlying algorithm is deterministic so this was unexpected
 - The magnitude of the difference was enough to change the scientific conclusions
@@ -26,9 +26,9 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 
 
 ::: {style="font-size: 50%;"}
-- {rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420
-- {mmrm} issue: https://github.com/openpharma/mmrm/issues/462
-- {TMB} issue: https://github.com/kaskr/adcomp/issues/398 
+- {`rbmi`} issue: https://github.com/insightsengineering/rbmi/issues/420
+- {`mmrm`} issue: https://github.com/openpharma/mmrm/issues/462
+- {`TMB`} issue: https://github.com/kaskr/adcomp/issues/398 
 :::
 
 ![](/images/rbmi_deps.png)
@@ -55,18 +55,6 @@ Unlike closed-source solutions, we can examine the source code and collaborate i
 
 :::
 
-## Deployment at Novartis
-
-```{mermaid}
-%%| echo: false
-timeline
-    title Novartis Legacy Approch -  R environments with ~6 month refresh
-    H123 : R4.1.0 bundle 1
-    H223 : R4.1.0 bundle 2
-    H124 : R4.3.1 bundle 1
-    H224 : R4.3.1 bundle 2
-         : Project-level bundle using an adhoc, GxP install
-```
 
 ## Thawing frozen environments
 
@@ -77,7 +65,7 @@ timeline
 
 R package validation is coupled to the container
 
-**Modern**
+**New SCE**
 
 R package validation is de-coupled from the container, and many R package cohorts validated against a single container.
 :::
