@@ -21,6 +21,13 @@
     "text": "Our aim\n\nExplore challenges in provisioning R environments for regulated industries\nEvaluate different approaches\nFoster dialogue\nShare experiences"
   },
   {
+    "objectID": "index.html#reproducibility-trust",
+    "href": "index.html#reproducibility-trust",
+    "title": "Deploying reproducible analytics environments for regulated use cases",
+    "section": "Reproducibility = Trust",
+    "text": "Reproducibility = Trust\n\nRequired by FDA, EMA, PMDA, GxP\n\nRepeatable results ⇒ credibility & compliance\n\nWithout it ⇒ risk, rework, delays\n\n\nReproducibility is foundational for audits and long-term credibility."
+  },
+  {
     "objectID": "index.html#pharmas-legacy-struggles",
     "href": "index.html#pharmas-legacy-struggles",
     "title": "Deploying reproducible analytics environments for regulated use cases",
@@ -47,13 +54,6 @@
     "title": "Deploying reproducible analytics environments for regulated use cases",
     "section": "Rafa’s & Appsilon’s Perspective",
     "text": "Rafa’s & Appsilon’s Perspective\nReproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
-  },
-  {
-    "objectID": "index.html#youve-got-to-roll-with-it",
-    "href": "index.html#youve-got-to-roll-with-it",
-    "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "You’ve got to roll with it!",
-    "text": "You’ve got to roll with it!\nA summary of experiences at Novartis.\nOrla Doyle (presented by James)"
   },
   {
     "objectID": "index.html#adopting-new-tools",
@@ -91,11 +91,11 @@
     "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
   },
   {
-    "objectID": "index.html#our-new-approach---thawing-frozen-environments",
-    "href": "index.html#our-new-approach---thawing-frozen-environments",
+    "objectID": "index.html#thawing-frozen-environments",
+    "href": "index.html#thawing-frozen-environments",
     "title": "Deploying reproducible analytics environments for regulated use cases",
-    "section": "Our new approach - thawing frozen environments",
-    "text": "Our new approach - thawing frozen environments"
+    "section": "Thawing frozen environments",
+    "text": "Thawing frozen environments\n\n\nLegacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
   },
   {
     "objectID": "index.html#conclusions",
@@ -205,100 +205,100 @@
   {
     "objectID": "sections/03-requirements.html",
     "href": "sections/03-requirements.html",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
+    "title": "You’ve got to roll with it!",
     "section": "",
-    "text": "A summary of experiences at Novartis.\nOrla Doyle (presented by James)"
-  },
-  {
-    "objectID": "sections/03-requirements.html#youve-got-to-roll-with-it",
-    "href": "sections/03-requirements.html#youve-got-to-roll-with-it",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "",
-    "text": "A summary of experiences at Novartis.\nOrla Doyle (presented by James)"
+    "text": "A summary of experiences at Novartis.\nOrla Doyle & James Black\n\n\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions\n\n\n\n\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!\n\n\n\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398\n\n\n\n\n\n\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!\n\n\n\n   \n\n\n\n\n\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install\n\n\n\n\n\n\n\n\n\n\n\nLegacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container.\n\n\n\n\n\n\n\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "sections/03-requirements.html#adopting-new-tools",
     "href": "sections/03-requirements.html#adopting-new-tools",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Adopting new tools",
-    "text": "Adopting new tools\n\nAt Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "At Novartis we needed the {rbmi} package for multiple imputation\nWe weren’t able to reproduce our results\nThe underlying algorithm is deterministic so this was unexpected\nThe magnitude of the difference was enough to change the scientific conclusions"
   },
   {
     "objectID": "sections/03-requirements.html#reproducibility-detective-work",
     "href": "sections/03-requirements.html#reproducibility-detective-work",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Reproducibility Detective Work",
-    "text": "Reproducibility Detective Work\nDid we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "Did we set the seed? Yes!\nIs this related to hardware? No!\nIs this a problem with a specific OS linear algebra library? No!"
   },
   {
     "objectID": "sections/03-requirements.html#open-source-in-action",
     "href": "sections/03-requirements.html#open-source-in-action",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Open-source in action",
-    "text": "Open-source in action\nUnlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "Unlike closed-source solutions, we can examine the source code and collaborate in a transparent manner between developers and maintainers.\n\n\n{rbmi} issue: https://github.com/insightsengineering/rbmi/issues/420\n{mmrm} issue: https://github.com/openpharma/mmrm/issues/462\n{TMB} issue: https://github.com/kaskr/adcomp/issues/398"
   },
   {
     "objectID": "sections/03-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
     "href": "sections/03-requirements.html#collaborated-with-package-maintainers-to-implement-the-fix",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Collaborated with package maintainers to implement the fix",
-    "text": "Collaborated with package maintainers to implement the fix\n\n\n\n\n~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "~3 weeks from issue identification to solution\n\nFix deployed at source\n\nHighly collaborative and engaged package maintainers - THANK YOU!!"
   },
   {
     "objectID": "sections/03-requirements.html#deployment-at-novartis",
     "href": "sections/03-requirements.html#deployment-at-novartis",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Deployment at Novartis",
-    "text": "Deployment at Novartis\n\n\n\n\n\ntimeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "timeline\n    title Novartis Legacy Approch -  R environments with ~6 month refresh\n    H123 : R4.1.0 bundle 1\n    H223 : R4.1.0 bundle 2\n    H124 : R4.3.1 bundle 1\n    H224 : R4.3.1 bundle 2\n         : Project-level bundle using an adhoc, GxP install"
   },
   {
-    "objectID": "sections/03-requirements.html#our-new-approach---thawing-frozen-environments",
-    "href": "sections/03-requirements.html#our-new-approach---thawing-frozen-environments",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Our new approach - thawing frozen environments",
-    "text": "Our new approach - thawing frozen environments"
+    "objectID": "sections/03-requirements.html#thawing-frozen-environments",
+    "href": "sections/03-requirements.html#thawing-frozen-environments",
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "Legacy\nR package validation is coupled to the container\nModern\nR package validation is de-coupled from the container, and many R package cohorts validated against a single container."
   },
   {
     "objectID": "sections/03-requirements.html#conclusions",
     "href": "sections/03-requirements.html#conclusions",
-    "title": "posit::conf(2025): Reproducible Environments Workshop",
-    "section": "Conclusions",
-    "text": "Conclusions\n\nThe packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
+    "title": "You’ve got to roll with it!",
+    "section": "",
+    "text": "The packages we rely on are in a constant state of flux: this is a feature not a bug!\nOur approach to package management needs to be fit-for-purpose and enabling timley access to the latest versions"
   },
   {
     "objectID": "sections/02-why.html",
     "href": "sections/02-why.html",
     "title": "Why This Matters",
     "section": "",
-    "text": "Reproducibility as the foundation for trust in Pharma"
+    "text": "Reproducibility as the foundation for trust in Pharma\n\n\n\nRequired by FDA, EMA, PMDA, GxP\n\nRepeatable results ⇒ credibility & compliance\n\nWithout it ⇒ risk, rework, delays\n\n\nReproducibility is foundational for audits and long-term credibility.\n\n\n\n\n\nMonoliths, manual validation\n\n“Validation tax”: bloated, slow pipelines\n\nTwo environments: exploratory vs validated\n\n\nDuplicated effort and inconsistencies when re-running work for submissions.\n\n\n\n\n\nFrozen, versioned execution environments\n\nConsistency across dev → validation → submission\n\nIsolate deps (R, Python, SAS); runs the same everywhere\n\nThey enable all of this, but can feel like a mystery — so we’ll show them in action today\n\n\n\nContainers are the backbone, but not the whole story, there’s a whole ecosystem around them:\n\nManaged package repos ⇒ governance & trust\n\nSnapshot versions ⇒ no surprises in re-runs\n\nAudited jobs ⇒ capture runtime metadata\n\nInfrastructure as Code ⇒ environments are reproducible end-to-end\n\n\nWhile we can’t touch everything today, we’ll touch on some of those points today\n\n\n\n\nReproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
+  },
+  {
+    "objectID": "sections/02-why.html#reproducibility-trust",
+    "href": "sections/02-why.html#reproducibility-trust",
+    "title": "Why This Matters",
+    "section": "",
+    "text": "Required by FDA, EMA, PMDA, GxP\n\nRepeatable results ⇒ credibility & compliance\n\nWithout it ⇒ risk, rework, delays\n\n\nReproducibility is foundational for audits and long-term credibility."
   },
   {
     "objectID": "sections/02-why.html#pharmas-legacy-struggles",
     "href": "sections/02-why.html#pharmas-legacy-struggles",
     "title": "Why This Matters",
-    "section": "Pharma’s Legacy Struggles",
-    "text": "Pharma’s Legacy Struggles\n\nMonoliths, manual validation\n\n“Validation tax”: bloated, slow pipelines\n\nTwo environments: exploratory vs validated\n\n\nDuplicated effort and inconsistencies when re-running work for submissions."
+    "section": "",
+    "text": "Monoliths, manual validation\n\n“Validation tax”: bloated, slow pipelines\n\nTwo environments: exploratory vs validated\n\n\nDuplicated effort and inconsistencies when re-running work for submissions."
   },
   {
     "objectID": "sections/02-why.html#containers-change-everything",
     "href": "sections/02-why.html#containers-change-everything",
     "title": "Why This Matters",
-    "section": "Containers Change Everything",
-    "text": "Containers Change Everything\n\nFrozen, versioned execution environments\n\nConsistency across dev → validation → submission\n\nIsolate deps (R, Python, SAS); runs the same everywhere\n\nThey enable all of this, but can feel like a mystery — so we’ll show them in action today"
+    "section": "",
+    "text": "Frozen, versioned execution environments\n\nConsistency across dev → validation → submission\n\nIsolate deps (R, Python, SAS); runs the same everywhere\n\nThey enable all of this, but can feel like a mystery — so we’ll show them in action today"
   },
   {
     "objectID": "sections/02-why.html#beyond-containers",
     "href": "sections/02-why.html#beyond-containers",
     "title": "Why This Matters",
-    "section": "Beyond Containers",
-    "text": "Beyond Containers\nContainers are the backbone, but not the whole story, there’s a whole ecosystem around them:\n\nManaged package repos ⇒ governance & trust\n\nSnapshot versions ⇒ no surprises in re-runs\n\nAudited jobs ⇒ capture runtime metadata\n\nInfrastructure as Code ⇒ environments are reproducible end-to-end\n\n\nWhile we can’t touch everything today, we’ll touch on some of those points today"
+    "section": "",
+    "text": "Containers are the backbone, but not the whole story, there’s a whole ecosystem around them:\n\nManaged package repos ⇒ governance & trust\n\nSnapshot versions ⇒ no surprises in re-runs\n\nAudited jobs ⇒ capture runtime metadata\n\nInfrastructure as Code ⇒ environments are reproducible end-to-end\n\n\nWhile we can’t touch everything today, we’ll touch on some of those points today"
   },
   {
     "objectID": "sections/02-why.html#rafas-appsilons-perspective",
     "href": "sections/02-why.html#rafas-appsilons-perspective",
     "title": "Why This Matters",
-    "section": "Rafa’s & Appsilon’s Perspective",
-    "text": "Rafa’s & Appsilon’s Perspective\nReproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
+    "section": "",
+    "text": "Reproducibility is not only a regulatory requirement it’s the foundation that lets science move fast and responsibly.\n\nReproducibility = compliance × innovation\n\nContainers = scalability + sustainability\n\nOne backbone: validated & exploratory zones\n\nModular, cloud-native Scientific Environments"
   },
   {
     "objectID": "sections/04-perspectives.html",
