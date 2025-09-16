@@ -16,10 +16,6 @@ execute:
   message: false
 ---
 
-EXPECTATIONS FOR MICHAEL M:
-- admiral 1.1.1 R package and it's dependencies is pre-installed in the environment
-- option("repos") does not point at CRAN (in the frozen environment you can't install packages from CRAN)
-
 # Introduction: Understanding R Environment Management
 
 In the R ecosystem, there are two primary approaches to managing package environments: **frozen** and **rolling** environments. Understanding the differences between these approaches is crucial for reproducible research, collaboration, and maintaining stable codebases.
